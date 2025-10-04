@@ -19,7 +19,21 @@
     padding: 0;
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+}
 
+.header-logo {
+    cursor: pointer;
+}
+.header2-logo {
+    cursor: pointer;
+}
+
+.footerinner2 h3:hover {
+    cursor: pointer;
+    color: var(--primary-color);
+}
 
 /* Hero Section Css */
 .swiper {
@@ -145,9 +159,10 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 12%;
+    width: 10%;
     height: 100%;
-    background: var(--primary-color);
+    background:white;
+    box-shadow: 2px 2px 2px 2px rgba(23, 22, 22, 0.267);
     /* Primary green */
 }
 
@@ -1080,12 +1095,15 @@ section p {
     color: var(--black-color);
     font-weight: 700;
     font-size: 0.7vw;
-    margin-top: 2vw;
     line-height: 1vw;
     opacity: 0.8;
 }
 
 .footerinner1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-direction: column;
     width: 25%;
     padding: 1vw 1vw;
 }
@@ -1108,7 +1126,7 @@ section p {
 }
 
 .footerinner1 img {
-    width: 15vw;
+    width: 8vw;
 }
 
 .footerinner4 {
@@ -1263,7 +1281,7 @@ footer a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color:white;
 }
 
 .img>img {
