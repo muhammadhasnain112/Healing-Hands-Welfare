@@ -1499,7 +1499,7 @@ footer a:hover {
 
 .aboutinner2 button:hover {
     background-color: #1E6B23;
-    cursor: pointer;
+    cursor: pointer !important;
 }
 
 /* faq section css */
