@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate</title>
+    <link rel="shortcut icon" href="img/al-mustafa-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Style+Script&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/superslider/dist/css/main.min.css" />
+</head>
+<style>
+    .cards-container {
+        height: 100% !important;
+        margin-top: 0px !important;
+    }
+
+    .card {
+        position: relative !important;
+        margin-top: 1vw !important;
+    }
+
+    section {
+
+        height: 95vw !important;
+        margin-top: 0px !important;
+
+    }
+
+    .card img {
+        width: 16.6vw !important;
+    }
+
+    .cards {
+        justify-content: space-around;
+        flex-wrap: wrap !important;
+        padding-top: 2vw !important;
+        margin-top: 0px !important;
+    }
+
+    .card9 {
+        width: 42vw;
+        height: 27vw;
+        margin-top: 1.3vw;
+        display: flex;
+        position: relative;
+        box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.096);
+
+    }
+
+    .card9>div {
+
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+    }
+
+    .card9 img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card-img {
+        width: 38%;
+    }
+
+    .card-text {
+        text-align: center;
+        width: 62%;
+        padding: 0vw 3vw;
+        background-color: #C2185B;
+        display: flex !important;
+        justify-content: center;
+    }
+
+    .card-text:hover {
+        background-color: #880E4F;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .card-text h2 {
+        color: white;
+        font-family: Oswald, sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 3vw;
+        font-size: 2.3vw;
+    }
+
+    .card-text p {
+        color: white;
+        font-family: Lato, sans-serif;
+        font-weight: 400;
+        line-height: 1.5vw;
+        font-size: 0.8vw;
+    }
+
+    .card-text button {
+        /* height: 2vw !important; */
+        padding: 1vw !important;
+        width: 30%;
+        font-family: Lato, sans-serif;
+        font-size: 0.7vw;
+        font-weight: 900;
+        margin-left: 35%;
+    }
+
+    .card-text button:hover {
+        cursor: pointer;
+    }
+
+    .card-text a {
+        font-family: Lato, sans-serif;
+        font-size: 0.7vw;
+        text-align: center;
+        text-decoration: none;
+        color: white !important;
+    }
+
+    .abbc {
+        height: 2vw;
+        padding: 0.5vw 0vw;
+        position: absolute;
+        bottom: 0px;
+        background-color: white;
+        right: 0px !important;
+        width: 62% !important;
+    }
+
+
+    @media (max-width:768px) {
+        .card {
+            margin-top: 3vw !important;
+        }
+
+        .card9 {
+
+            margin-top: 3vw !important;
+        }
+
+    }
+
+    @media (max-width:480px) {
+
+        .card {
+            margin-top: 4vw !important;
+        }
+
+        .card9 {
+
+            margin-top: 4vw !important;
+        }
+
+
+    }
+</style>
+
+<body>
+    <div id="donate-bar2">
+        <h3>Checkout</h3>
+        <h4>Help us further</h4>
+        <div style="margin-top: 2vw;">
+            <div>
+                <div>
+                    <h6>Plant an Olive Tree in <br>Palestine</h6>
+                    <h3 id="check-box1-text"><input type="checkbox" id="check-box1"> Olive Tree</h3>
+                </div>
+                <div>
+                    <h3 style="color: black;">Rs: 10.00</h3>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <div>
+                    <h6>Eye Project</h6>
+                    <h3 id="check-box2-text"><input type="checkbox" id="check-box2">Qur'an Reading Pen</h3>
+                </div>
+                <div>
+                    <h3 style="color: black;">Rs: 25.00</h3>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div>
+                <div>
+                    <h6>Administration</h6>
+                    <h3 id="check-box3-text"><input type="checkbox" id="check-box3"> Administration Fee</h3>
+                </div>
+                <div>
+                    <h3 style="color: black;">Rs: 1.00</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="total">
+            <div>
+                <h3>Total</h3>
+                <h3 id="total-2">Rs:0.00</h3>
+            </div>
+            <div><button onclick="add_cart()">Complete Donation <i class="ri-arrow-right-s-line"></i></button></div>
+        </div>
+
+    </div>
+
+    <div class="donate-bar" id="donate-bar">
+        <div id="cancel"><i class="ri-close-fill"></i></div>
+        <h3><i class="ri-check-fill"></i> Donation Added</h3>
+        <h4>You are donating to <span></span></h4>
+
+
+        <div id="zakat-calc">
+            <div id="zakat-pay">
+                <div>
+                    <h3>Zakat</h3>
+                    <p>Single Payment Zakat</p>
+                    <div>
+                        <div style="border-right: none !important;" id="minus"><i class="ri-subtract-line"></i></div>
+                        <div style="border-right: none !important;" id="counter">1</div>
+                        <div id="plus"><i class="ri-add-line"></i></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 id="zakatvalue"></h3>
+                    <p><a href="#" onclick="remove()">Remove</a></p>
+                </div>
+            </div>
+            <div id="olive-tree">
+                <div>
+                    <h3>OLIVE TREE</h3>
+                    <p>Single Payment Zakat</p>
+                    <div>
+                        <div style="border-right: none !important;" id="minus2"><i class="ri-subtract-line"></i></div>
+                        <div style="border-right: none !important;" id="counter2">1</div>
+                        <div id="plus2"><i class="ri-add-line"></i></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 id="zakatvalue2">Rs:10.00</h3>
+                    <p><a href="#" onclick="remove1()">Remove</a></p>
+                </div>
+            </div>
+            <div id="Quran-reading">
+                <div>
+                    <h3>Qur'an Reading Pen</h3>
+                    <p>Single Payment Zakat</p>
+                    <div>
+                        <div style="border-right: none !important;" id="minus3"><i class="ri-subtract-line"></i></div>
+                        <div style="border-right: none !important;" id="counter3">1</div>
+                        <div id="plus3"><i class="ri-add-line"></i></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 id="zakatvalue3">Rs:25.00</h3>
+                    <p><a href="#" onclick="remove2()">Remove</a></p>
+                </div>
+            </div>
+            <div id="Administration" style="border: none;">
+                <div>
+                    <h3>Administration Fee</h3>
+                    <p>Single Payment Zakat</p>
+                    <div>
+                        <div style="border-right: none !important;" id="minus4"><i class="ri-subtract-line"></i></div>
+                        <div style="border-right: none !important;" id="counter4">1</div>
+                        <div id="plus4"><i class="ri-add-line"></i></div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 id="zakatvalue4">Rs:1.00</h3>
+                    <p><a href="#" onclick="remove3()">Remove</a></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="all-calc">
+            <div>
+                <h3>Donations</h3>
+                <h3 id="all-zakat-show"></h3>
+            </div>
+            <div>
+                <button style="background-color: rgb(199, 213, 24);" id="add-another">ADD ANOTHER <i
+                        class="ri-arrow-right-s-line"></i></button>
+                <button style="background-color:  rgb(0, 155, 131) ; color: #fff;" id="checkout">CHECKOUT <i
+                        class="ri-arrow-right-s-line"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <header>
+        <nav>
+            <div class="navinner1">
+                <img src="images/logo.png" alt="" onclick="window.location.href='index.html' ">
+            </div>
+            <div class="navinner2">
+                <div>
+                    <div>
+                        <div class="inputdiv with-icon">
+                            <input type="text" placeholder="SEARCH" class="with-icon" id="input"> <i
+                                class="ri-search-line" id="search-icon"></i>
+                        </div>
+                        <div id="input2">
+                            <!-- <p class="">GBP <i class="ri-arrow-down-s-line"></i>&nbsp; </p> -->
+                            <p class="">EN <i class="ri-arrow-down-s-line"></i>&nbsp;</p>
+                            <small class="contact" onclick="window.location.href = 'contact.html'">CONTACT US</small>
+                            <small class="contact" onclick=" window.location.href = 'zakat-calculator.html' ">ZAKAT
+                                CALCULATOR</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="appeals">
+                    <h3 id="zakat">ZAKAT <i class="ri-arrow-down-s-line"></i></h3>
+                    <h3 id="envolved">OUR PROJECTS<i class="ri-arrow-down-s-line"></i></h3>
+                    <h3 id="about" onclick="window.location.href = 'about.html'">ABOUT US</h3>
+                </div>
+            </div>
+            <div class="navinner3">
+                <p>Call us for information</p>
+                <strong style="margin-top: 0.3vw;"><a href="tel:+92208 569 6444">0208 569 6444</a></strong>
+                <button style="margin-top: 1vw;">DONATE NOW &nbsp;<i class="ri-arrow-right-s-line"></i></button>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <!-- second navbar -->
+    <div class="secondnav" id="second">
+        <div class="img">
+            <img src="images/logo.png" alt="logo" onclick="window.location.href='index.html' ">
+        </div>
+
+        <div>
+            <h5 class="border" style="padding-right: 1vw;" id="zakat2">ZAKAT <i class="ri-arrow-down-s-line"
+                    style=" color: black !important;"></i></h5>
+        </div>
+
+        <div>
+            <h5 class="border" style="padding-right: 1vw;" id="involved2">OUR PROJECTS<i class="ri-arrow-down-s-line"
+                    style=" color: black !important;"></i></h5>
+        </div>
+        <div>
+            <h5 class="border" style="padding-right: 1vw;" id="about2" onclick="window.location.href = 'about.html'">
+                ABOUT US </h5>
+        </div>
+
+
+        <div>
+            <p class="border" style="padding-right: 1.2vw;">EN <i class="ri-arrow-down-s-line"></i>&nbsp;</p>
+        </div>
+        <div style="padding-right: 1.2vw;">
+            <small onclick="window.location.href ='contact.html' " class="contact">CONTACT US</small>
+        </div>
+        <div style="padding-right: 1.2vw;">
+            <small onclick=" window.location.href = 'zakat-calculator.html' ">ZAKAT CALCULATOR</small>
+        </div>
+        <div>
+            <button style="margin-left: 3vw;">DONATE NOW <i class="ri-arrow-right-s-line"></i></button>
+        </div>
+    </div>
+    <!-- second navbar -->
+
+
+ <div class="infobar2" id="infobar2">
+        <a href="zakat-calculator.html">
+            <h3>Zakat Calculator</h3>
+        </a>
+
+    </div>
+
+    <div class="infobar3" id="infobar3">
+        <div class="info3inner1">
+            <div class="volunter">
+                <div>
+                    <h2>Ongoing Projects</h2>
+                </div>
+            </div>
+
+            <div class="events-section">
+                <div class="events">
+                    <a href="Dispensaries.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-heart-2-line"></i>
+                            <h3>Welfare Dispensaries</h3>
+                        </div>
+                    </a>
+
+                    <a href="disabilities.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-hand-heart-line"></i>
+                            <h3>Disabilities Rehabilitation</h3>
+                        </div>
+                    </a>
+
+                    <a href="Women.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-team-line"></i>
+                            <h3>Women Vocational Training Program</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="events">
+                    <a href="Education.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-book-read-line"></i>
+                            <h3>Education Assistance</h3>
+                        </div>
+                    </a>
+
+                    <a href="Free-medical.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-stethoscope-line"></i>
+                            <h3>Free Medical Camps</h3>
+                        </div>
+                    </a>
+
+                    <a href="Free-cataract.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-water-flash-line"></i>
+                            <h3>Free Cataract Surgeries</h3>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="events">
+                    <a href="Freejudiciary.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-community-line"></i>
+                            <h3>Free Judiciary Services</h3>
+                        </div>
+                    </a>
+
+                    <a href="Water-for-Life.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-community-line"></i>
+                            <h3>Water for Life</h3>
+                        </div>
+                    </a>
+
+                    <a href="Empowering.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-community-line"></i>
+                            <h3>Empowering Polio Frontline Heroes</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="upcoming-section">
+            <div class="volunter">
+                <div>
+                    <h2 class="upcoming-h2">Upcoming Projects</h2>
+                </div>
+            </div>
+
+            <a href="50bed.html" class="clickable-item">
+                <div class="upcoming-mega-events">
+                    <div class="upcoming-mega-eventinner">
+                        <i class="ri-heart-2-line"></i>
+                        <h3>50-Bed Hospital</h3>
+                    </div>
+                </div>
+            </a>
+
+            <a href="orphan.html" class="clickable-item">
+                <div class="upcoming-mega-events">
+                    <div class="upcoming-mega-eventinner">
+                        <i class="ri-hand-heart-line"></i>
+                        <h3>Orphan Assistance Programs</h3>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="donatesec">
+        <h2>Donate today & save lives</h2>
+        <h3>Every Zakat donation has the potential for profound impact.</h3>
+    </div>
+
+    <main>
+        <div>
+            <h4>Quick Donate</h4>
+        </div>
+        <div>
+            <select name="" id="">
+                <option value="">Single Payment</option>
+                <option value="">Monthly Payment</option>
+            </select>
+        </div>
+        <div>
+            <select name="" id="donate-now-value">
+                <option value="PKR 40.00">PKR 40.00</option>
+                <option value="PKR 50.00">PKR 50.00</option>
+                <option value="PKR 100.00">PKR 100.00</option>
+            </select>
+        </div>
+        <div>
+            <select id="">
+                <option value="">General Donation</option>
+                <option value="">Zakat</option>
+                <option value="">Sadaqah</option>
+            </select>
+        </div>
+        <div>
+            <button id="doante-now" onclick="location.href='donate.html'">DONATE NOW</button>
+        </div>
+    </main>
+
+    <section >
+        <div class="cards-container">
+            <div class="cards">
+                <!-- Card 1 -->
+                <div class="card card1">
+                    <img src="images/WelfareDispensaries.jpg" alt="" class="">
+                    <div class=" card-content1 red"></div>
+                    <div class="card-content red">
+                        <div>
+                            <h2>Welfare Dispensaries</h2>
+                        </div>
+                        <div>
+                            <button class="card-btn red" onclick="location.href='donate.html'">DONATE</button>
+                            <a href="Dispensaries.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="card-footer red"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card card2">
+                    <img src="images/DisabilitiesRehabilitation.jpg" alt="">
+                    <div class="card-content red">
+                        <h2>Disabilities Rehabilitation</h2>
+                        <div>
+                            <button class="card-btn red" onclick="location.href='donate.html'">DONATE</button>
+                            <a href="disabilities.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="card-footer red"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card card3">
+                    <img src="images/WomenVocationalTrainingProgram.jpg" alt="">
+                    <div class="card-content green">
+                        <h2>Women Vocational Training Program
+                        </h2>
+                        <div>
+                            <button class="card-btn green" onclick="location.href='donate.html'">DONATE</button>
+                            <a href="Women.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="card-footer green"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card card4">
+                    <img src="images/EducationAssistance.jpg" alt="">
+                    <div class="card-content red">
+                        <h2>Education Assistance</h2>
+                        <div>
+                            <button class="card-btn red" onclick="location.href='donate.html'">DONATE</button>
+                            <a href="Education.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="card-footer red"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card card5">
+                    <img src="images/FreeMedicalCamps.jpg" alt="">
+                    <div class="card-content green">
+                        <h2>Free Medical Camps</h2>
+                        <div>
+                            <button class="card-btn green" onclick="location.href='donate.html'">DONATE</button>
+                            <a href="Free-medical.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="card-footer green"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card card6">
+                    <img src="images/FreeCataractSurgeries.jpg" alt="">
+                    <div class="card-content red">
+                        <h2>Free Cataract Surgeries</h2>
+                        <div>
+                            <button class="card-btn red" onclick="location.href='donate.html'">DONATE</button>
+                            <a href="Free-cataract.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="card-footer red"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="card card7">
+                    <img src="images/FreeJudiciaryServices.jpg" alt="">
+                    <div class="card-content red">
+                        <h2>Free Judiciary Services</h2>
+                        <div>
+                            <button class="card-btn red" onclick="location.href='donate.html'">DONATE</button>
+                            <a href="Freejudiciary.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="card-footer red"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="card card8">
+                    <img src="images/WaterForLife.jpg" alt="">
+                    <div class="card-content green">
+                        <h2>Water for Life</h2>
+                        <div>
+                            <button class="card-btn green" onclick="location.href='donate.html'">DONATE</button>
+                            <a href="Water-for-Life.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="card-footer green"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="card9">
+                    <div class="card-img">
+                        <img src="images/EmpoweringPolioFrontlineHeroes.jpg" alt="" class="">
+                    </div>
+                    <div class="card-text">
+                        <h2>Empowering Polio Frontline Heroes</h2>
+                        <p>Frontline Workers are the true champions in the fight against polio. Every day, they go door
+                            to door, reaching families, educating communities, and ensuring every child receives the
+                            life-saving polio vaccine.</p>
+                        <button class="card-btn red" onclick="location.href='donate.html'">DONATE</button>
+                        <a href="Empowering.html">LEARN MORE</a>
+                        <div class="card-footer red"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                    </div>
+                </div>
+
+                <!-- Card 10 -->
+                <div class="card card10">
+                    <img src="images/EmpoweringPolioFrontlineHeroes.jpg" alt="">
+                    <div class="card-content green">
+                        <h2>50-Bed Hospital</h2>
+                        <div>
+                            <button class="card-btn green" onclick="location.href='donate.html'">DONATE</button>
+                            <a href="50bed.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="card-footer green"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="card card11">
+                    <img src="images/around.png" alt="">
+                    <div class="card-content green">
+                        <h2>Orphan Assistance Programs</h2>
+                        <div>
+                            <button class="card-btn green" onclick="location.href='donate.html'">DONATE</button>
+                            <a href="orphan.html">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="card-footer green"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="aside2">
+        <h2>MORE WAYS TO REACH OUT & GIVE</h2>
+
+        <div class="cards2">
+
+            <div>
+                <div><img src="img/phone-call.png" alt=""></div>
+                <h3>Donate over the phone</h3>
+                <div>
+                    <p>To donate over the phone,</p>
+                    <p>call <a href="tel:03460134753">0346-0134753</a> and</p>
+                    <p>ask for the Fundraising</p>
+                    <p>Team.</p>
+                </div>
+            </div>
+            <div>
+                <div><img src="img/cheque.png" alt=""></div>
+                <h3>Donate by Cheque</h3>
+                <div>
+
+                    <p>'Healing Hands Welfare</p>
+                    <p>Trust' and send it to us at</p>
+                    <p>P # 823/B, Survey # 212/A,</p>
+                    <p> Near Shahjehan Chowk Bismillah </p>
+                    <p> Colony, Orangi Town, Karachi.</p>
+                </div>
+            </div>
+            <div>
+                <div><img src="images/around.png" alt=""></div>
+                <h3>International Donation</h3>
+                <div>
+                    <p>PK05 ABPA</p>
+                    <p>0010063752050016</p>
+                    <p>Swift Code: ABL :</p>
+                    <p>ABPAPKKA0991</p>
+                </div>
+            </div>
+            <div>
+                <div><img src="img/bank.png" alt=""></div>
+                <h3>Donate by Bank</h3>
+                <div>
+                    <!-- <p>To donate by bank please</p> -->
+                    <p>Account name</p>
+                    <p>Healing Hands Health Care <br> Social Welfare Org.</p>
+                    <p>Account No. PK05 ABPA:0010063752050016</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="footerinner1">
+            <img src="images/logo.png" alt="logo" class="footer-logo" onclick="window.location.href='index.html' ">
+            <p>Get our monthly charity updates and feedback reports on how your donations are being spent by subscribing
+                to our newsletter.</p>
+            <!-- <div class="inputfooter">
+                <div class="input-div"> <input type="text" placeholder="Email Address"></div>
+                <div class="input-button"><button> <i class="ri-arrow-right-s-line"></i></button></div>
+            </div> -->
+        </div>
+        <div class="footerinner2">
+            <h2>Ongoing Projects</h2>
+            <h3 onclick="window.location.href='Dispensaries.html'">Welfare Dispensaries</h3>
+            <h3 onclick="window.location.href='Education.html'">Education Assistance</h3>
+            <h3 onclick="window.location.href='Free-medical.html'">Free Medical Camps</h3>
+            <h3 onclick="window.location.href='Free-cataract.html'">Free Cataract Surgeries</h3>
+            <h3 onclick="window.location.href='Water-for-Life.html'">Water for Life</h3>
+        </div>
+
+        <div class="footerinner2">
+            <h2>Upcoming Projects</h2>
+            <h3 onclick="window.location.href='50-Bed-Hospital.html'">50-Bed Hospital</h3>
+            <h3 onclick="window.location.href='Orphan-Assistance.html'">Orphan Assistance Programs</h3>
+            <h3>&nbsp;</h3>
+            <h3>&nbsp;</h3>
+            <h3>&nbsp;</h3>
+        </div>
+        <div class="footerinner2">
+            <h2>Quick Links</h2>
+            <h3 onclick="window.location.href='#'">Donate Now</h3>
+            <h3 onclick="window.location.href='contact.html'">Contact Us</h3>
+            <h3 onclick="window.location.href='about.html'">About Us</h3>
+            <h3 onclick="window.location.href='zakat-calculator.html'">Zakat Calculator</h3>
+            <h3>&nbsp;</h3>
+        </div>
+        <!-- <div class="footerinner4">
+            <h3>DGSW (S)</h3>
+            <p>Become a Member</p>
+            <p>Latest News & Updates</p>
+        </div> -->
+        <div class="footerinner5">
+            <div>
+                <small>Call us for information</small><br><br>
+                <h5><a href="tel:03460134753">0346-0134753</a></h5>
+            </div>
+            <h4>Connect with Us :</h4>
+            <div><a href="https://www.linkedin.com/in/healing-hands/" target="_blank"><i
+                        class="ri-linkedin-fill"></i></a></div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <!-- <div><img src="img/zakat-policy.png" alt="" class="zakatimg"> <img src="img/footer.jpg" alt="" -->
+            <!-- class="regularimg"></div> -->
+            <div>
+                <p>© Copyright 2025. Healing Hands Welfare Trust® is a registered charity in Pakistan & registered
+                    company 2433.</p>
+            </div>
+        </div>
+
+        <div class="foooterlastinner">
+            <h6>Terms & Condition</h6>
+            <h6>Privacy Policy</h6>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
