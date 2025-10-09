@@ -31,185 +31,87 @@
     <style>
         .card {
             width: 15vw !important;
-
         }
     </style>
 </head>
 
 <body>
-    <div id="donate-bar2">
-        <h3>Checkout</h3>
-        <h4>Help us further</h4>
-        <div style="margin-top: 2vw;">
-            <div>
-                <div>
-                    <h6>Plant an Olive Tree in <br>Palestine</h6>
-                    <h3 id="check-box1-text"><input type="checkbox" id="check-box1"> Olive Tree</h3>
+    <!-- Two-Tier Header for Mobile -->
+    <div class="main-header">
+        <!-- First Tier: Logo and Donate Button -->
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="header-logo-section">
+                    <img src="images/Medical Monogram-02.png" alt="logo" class="header-logo"
+                        onclick="window.location.href='index.html'">
+                    <div class="header-title">Healing Hands</div>
                 </div>
-                <div>
-                    <h3 style="color: black;">Rs: 10.00</h3>
-                </div>
+                <button class="donate-btn" onclick="window.location.href='donate.html'">
+                    DONATE
+                </button>
             </div>
         </div>
 
-        <div>
-            <div>
-                <div>
-                    <h6>Eye Project</h6>
-                    <h3 id="check-box2-text"><input type="checkbox" id="check-box2">Qur'an Reading Pen</h3>
+        <!-- Second Tier: Menu and Search -->
+        <div class="header-bottom">
+            <div class="header-bottom-content">
+                <div class="menu-section">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        ☰
+                    </button>
+                    <span class="menu-text">MENU</span>
                 </div>
-                <div>
-                    <h3 style="color: black;">Rs: 25.00</h3>
+                <div class="search-section">
+                    <input type="text" class="search-input" placeholder="SEARCH">
+                    <i class="ri-search-line search-icon"></i>
                 </div>
-            </div>
-        </div>
-
-        <div>
-            <div>
-                <div>
-                    <h6>Administration</h6>
-                    <h3 id="check-box3-text"><input type="checkbox" id="check-box3"> Administration Fee</h3>
-                </div>
-                <div>
-                    <h3 style="color: black;">Rs: 1.00</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="total">
-            <div>
-                <h3>Total</h3>
-                <h3 id="total-2">Rs:0.00</h3>
-            </div>
-            <div><button onclick="add_cart()">Complete Donation <i class="ri-arrow-right-s-line"></i></button></div>
-        </div>
-
-    </div>
-
-    <div class="donate-bar" id="donate-bar">
-        <div id="cancel"><i class="ri-close-fill"></i></div>
-        <h3><i class="ri-check-fill"></i> Donation Added</h3>
-        <h4>You are donating to <span></span></h4>
-
-
-        <div id="zakat-calc">
-            <div id="zakat-pay">
-                <div>
-                    <h3>Zakat</h3>
-                    <p>Single Payment Zakat</p>
-                    <div>
-                        <div style="border-right: none !important;" id="minus"><i class="ri-subtract-line"></i></div>
-                        <div style="border-right: none !important;" id="counter">1</div>
-                        <div id="plus"><i class="ri-add-line"></i></div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 id="zakatvalue"></h3>
-                    <p><a href="#" onclick="remove()">Remove</a></p>
-                </div>
-            </div>
-            <div id="olive-tree">
-                <div>
-                    <h3>OLIVE TREE</h3>
-                    <p>Single Payment Zakat</p>
-                    <div>
-                        <div style="border-right: none !important;" id="minus2"><i class="ri-subtract-line"></i></div>
-                        <div style="border-right: none !important;" id="counter2">1</div>
-                        <div id="plus2"><i class="ri-add-line"></i></div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 id="zakatvalue2">Rs:10.00</h3>
-                    <p><a href="#" onclick="remove1()">Remove</a></p>
-                </div>
-            </div>
-            <div id="Quran-reading">
-                <div>
-                    <h3>Qur'an Reading Pen</h3>
-                    <p>Single Payment Zakat</p>
-                    <div>
-                        <div style="border-right: none !important;" id="minus3"><i class="ri-subtract-line"></i></div>
-                        <div style="border-right: none !important;" id="counter3">1</div>
-                        <div id="plus3"><i class="ri-add-line"></i></div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 id="zakatvalue3">Rs:25.00</h3>
-                    <p><a href="#" onclick="remove2()">Remove</a></p>
-                </div>
-            </div>
-            <div id="Administration" style="border: none;">
-                <div>
-                    <h3>Administration Fee</h3>
-                    <p>Single Payment Zakat</p>
-                    <div>
-                        <div style="border-right: none !important;" id="minus4"><i class="ri-subtract-line"></i></div>
-                        <div style="border-right: none !important;" id="counter4">1</div>
-                        <div id="plus4"><i class="ri-add-line"></i></div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 id="zakatvalue4">Rs:1.00</h3>
-                    <p><a href="#" onclick="remove3()">Remove</a></p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="all-calc">
-            <div>
-                <h3>Donations</h3>
-                <h3 id="all-zakat-show"></h3>
-            </div>
-            <div>
-                <button style="background-color: rgb(199, 213, 24);" id="add-another">ADD ANOTHER <i
-                        class="ri-arrow-right-s-line"></i></button>
-                <button style="background-color:  rgb(0, 155, 131) ; color: #fff;" id="checkout">CHECKOUT <i
-                        class="ri-arrow-right-s-line"></i></button>
             </div>
         </div>
     </div>
+
 
     <header>
-        <nav>
-            <div class="navinner1">
-                <img src="images/Medical Monogram-02.png" alt="logo" class="header-logo"
-                    onclick="window.location.href='index.html' ">
-            </div>
-            <div class="navinner2">
+       <!-- Desktop Navigation -->
+    <nav id="navbar" class="desktop-nav">
+        <div class="navinner1">
+            <img src="images/Medical Monogram-02.png" alt="logo" class="header-logo"
+                onclick="window.location.href='index.html' ">
+        </div>
+        <div class="navinner2">
+            <div>
                 <div>
-                    <div>
-                        <div class="inputdiv with-icon">
-                            <input type="text" placeholder="SEARCH" class="with-icon" id="input"> <i
-                                class="ri-search-line" id="search-icon"></i>
-                        </div>
-                        <div id="input2">
-                            <!-- <p class="">GBP <i class="ri-arrow-down-s-line"></i>&nbsp; </p> -->
-                            <p class="">EN <i class="ri-arrow-down-s-line"></i>&nbsp;</p>
-                            <small class="contact" onclick="window.location.href = 'contact.html'">CONTACT US</small>
-                            <small class="contact" onclick=" window.location.href = 'zakat-calculator.html' ">ZAKAT
-                                CALCULATOR</small>
-                        </div>
+                    <div class="inputdiv with-icon">
+                        <input type="text" placeholder="SEARCH" class="with-icon" id="input"> <i class="ri-search-line"
+                            id="search-icon"></i>
+                    </div>
+                    <div id="input2">
+                        <!-- <p class="">GBP <i class="ri-arrow-down-s-line"></i>&nbsp; </p> -->
+                        <p class="">EN <i class="ri-arrow-down-s-line"></i>&nbsp;</p>
+                        <small class="contact" onclick="window.location.href = 'contact.html'">CONTACT US</small>
+                        <small class="contact" onclick=" window.location.href = 'zakat-calculator.html' ">ZAKAT
+                            CALCULATOR</small>
                     </div>
                 </div>
+            </div>
 
-                <div class="appeals">
-                    <h3 id="zakat">ZAKAT <i class="ri-arrow-down-s-line"></i></h3>
-                    <h3 id="envolved">OUR PROJECTS<i class="ri-arrow-down-s-line"></i></h3>
-                    <h3 id="about" onclick="window.location.href = 'about.html'">ABOUT US</h3>
-                </div>
+            <div class="appeals">
+                <h3 id="zakat">ZAKAT <i class="ri-arrow-down-s-line"></i></h3>
+                <h3 id="envolved">OUR PROJECTS<i class="ri-arrow-down-s-line"></i></h3>
+                <h3 id="about" onclick="window.location.href = 'about.html'">ABOUT US</h3>
             </div>
-            <div class="navinner3">
-                <p>Call us for information</p>
-                <strong style="margin-top: 0.3vw;"><a href="tel:+923460134753">0346-0134753</a></strong>
-                <button style="margin-top: 1vw;" onclick="window.location.href = 'donate.html'">DONATE NOW &nbsp;<i
-                        class="ri-arrow-right-s-line"></i></button>
-            </div>
-        </nav>
+        </div>
+        <div id="add-cart-detail">
+            <h2>CART</h2>
+            <h3 id="add-card-number"></h3>
+            <h5 id="add-card-allrupee"></h5>
+        </div>
+        <div class="navinner3">
+            <p>Call us for information</p>
+            <strong style="margin-top: 0.3vw;"><a href="tel:+923460134753">0346-0134753</a></strong>
+            <button style="margin-top: 1vw;" onclick="window.location.href = 'donate.html'">DONATE NOW &nbsp;<i
+                    class="ri-arrow-right-s-line"></i></button>
+        </div>
+    </nav>
         <h6 class="image-zakat">
             <div>
 
@@ -217,6 +119,174 @@
             </div>
         </h6>
     </header>
+
+    <!-- donate bars -->
+    <div class="donate-bar" id="donate-bar">
+        <div id="cancel"><i class="ri-close-fill" onclick="cancel()"></i></div>
+        <h3><i class="ri-check-fill"></i> Donation Added</h3>
+        <h4>You are donating to <span></span></h4>
+
+
+        <div id="zakat-calc">
+
+        </div>
+
+        <div class="all-calc">
+            <div>
+                <h3>Donations</h3>
+                <h3 id="all_zakat_show"></h3>
+            </div>
+            <div>
+                <button id="add-another">ADD ANOTHER <i class="ri-arrow-right-s-line"></i></button>
+                <button onclick="window.location.href='add-cart.html'" id="checkout">CHECKOUT <i
+                        class="ri-arrow-right-s-line"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- donate bars -->
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-logo-section">
+                <img src="images/Medical Monogram-02.png" alt="logo" class="mobile-nav-logo">
+                <h3>Healing Hands</h3>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav-content">
+            <!-- Add-cart -->
+            <div class="mobile-nav-section" id="cart-div">
+                <h4 id="cart">Cart</h4>
+            </div>
+            <!-- Main Navigation -->
+            <div class="mobile-nav-section">
+                <h4>Pages <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="about.html"><i class="ri-information-line"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="ri-phone-line"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Zakat Section -->
+            <div class="mobile-nav-section">
+                <h4>Zakat <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="donate.html"><i class="ri-heart-line"></i> Donate Zakat</a></li>
+                    <li><a href="zakat-calculator.html"><i class="ri-calculator-line"></i> Zakat Calculator</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Projects Section -->
+            <div class="mobile-nav-section">
+                <h4>Ongoing Projects <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="Dispensaries.html"><i class="ri-hospital-line"></i> Welfare Dispensaries</a></li>
+                    <li><a href="disabilities.html"><i class="ri-wheelchair-line"></i> Disabilities Rehabilitation</a>
+                    </li>
+                    <li><a href="Women.html"><i class="ri-team-line"></i> Women Vocational Training</a></li>
+                    <li><a href="Education.html"><i class="ri-book-line"></i> Education Assistance</a></li>
+                    <li><a href="Free-medical.html"><i class="ri-stethoscope-line"></i> Free Medical Camps</a></li>
+                    <li><a href="Free-cataract.html"><i class="ri-eye-line"></i> Free Cataract Surgeries</a></li>
+                    <li><a href="Freejudiciary.html"><i class="ri-scales-line"></i> Free Judiciary Services</a></li>
+                    <li><a href="Water-for-Life.html"><i class="ri-drop-line"></i> Water for Life</a></li>
+                    <li><a href="Empowering.html"><i class="ri-heart-pulse-line"></i> Empowering Polio Heroes</a></li>
+                    <li><a href="food-security.html"><i class="ri-restaurant-line"></i>Food Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Upcoming Projects -->
+            <div class="mobile-nav-section">
+                <h4>Upcoming Projects <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="50bed.html"><i class="ri-hospital-line"></i> 50-Bed Hospital</a></li>
+                    <li><a href="orphan.html"><i class="ri-heart-line"></i> Orphan Assistance</a></li>
+                </ul>
+            </div>
+
+            <!-- Actions -->
+            <div class="mobile-nav-actions">
+                <button class="mobile-donate-btn" onclick="window.location.href='donate.html'">
+                    <i class="ri-heart-line"></i> Donate Now
+                </button>
+
+                <div class="mobile-nav-contact">
+                    <p>Call us for information</p>
+                    <a href="tel:+923460134753">0346-0134753</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- donate bars -->
+    <div class="donate-bar" id="donate-bar">
+        <div id="cancel"><i class="ri-close-fill" onclick="cancel()"></i></div>
+        <h3><i class="ri-check-fill"></i> Donation Added</h3>
+        <h4>You are donating to <span></span></h4>
+
+
+        <div id="zakat-calc">
+
+        </div>
+
+        <div class="all-calc">
+            <div>
+                <h3>Donations</h3>
+                <h3 id="all_zakat_show"></h3>
+            </div>
+            <div>
+                <button id="add-another">ADD ANOTHER <i class="ri-arrow-right-s-line"></i></button>
+                <button onclick="window.location.href='add-cart.html'" id="checkout">CHECKOUT <i
+                        class="ri-arrow-right-s-line"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- donate bars -->
+
+    <div class="secondnav" id="second">
+        <div class="img">
+            <img src="images/Medical Monogram-02.png" alt="logo" class="header2-logo"
+                onclick="window.location.href='index.html' ">
+        </div>
+
+        <div>
+            <h5 class="border" style="padding-right: 1vw;" id="zakat2">ZAKAT <i class="ri-arrow-down-s-line"
+                    style=" color: black !important;"></i></h5>
+        </div>
+
+        <div>
+            <h5 class="border" style="padding-right: 1vw;" id="involved2">OUR PROJECTS<i class="ri-arrow-down-s-line"
+                    style=" color: black !important;"></i></h5>
+        </div>
+
+        <div>
+            <h5 class="border" style="padding-right: 1vw;" id="about2" onclick="window.location.href = 'about.html'">
+                ABOUT US </h5>
+        </div>
+
+
+        <div>
+            <p class="border" style="padding-right: 1.2vw;">EN <i class="ri-arrow-down-s-line"></i>&nbsp;</p>
+        </div>
+        <div style="padding-right: 1.2vw;">
+            <small onclick="window.location.href ='contact.html' " class="contact">CONTACT US</small>
+        </div>
+        <div style="padding-right: 1.2vw;">
+            <small onclick=" window.location.href = 'zakat-calculator.html' ">ZAKAT CALCULATOR</small>
+        </div>
+        <div class="cart-small" style="padding-right: 1.2vw;" id="add-cart-small">
+            <small>CART</small>
+        </div>
+        <div>
+            <button style="margin-left: 3vw;" onclick="window.location.href = 'donate.html'">DONATE NOW <i
+                    class="ri-arrow-right-s-line"></i></button>
+        </div>
+    </div>
 
     <div class="zakat-imagebar">
         <div class="zakat-text">
@@ -235,15 +305,7 @@
                 find out more
                 about our 100% Zakat Policy Projects.</p>
         </div>
-        <div class="zakat-img-div"><img src="img/zaka2.jpg" alt="">
-            <div><button><a href="https://youtu.be/zWFVRdtL1-Y?si=l5FnJVKjoU46xiS1"><i class="ri-play-fill"></i> &nbsp;
-                        Watch The Video</a></button></div>
-        </div>
     </div>
-
-    <h2 class="h21">
-        *Nisab values for Zakat are correct as of January 2025 (<span> www.gold.co.uk</span> )
-    </h2>
 
     <div class="zakat-already">
         <div>
@@ -285,38 +347,38 @@
                     <div>
                         <div class="calc-text">
                             <p>In hand and in bank accounts </p>
-                            <p>Rs:</p>
                         </div>
-                        <div class="calc-input"><input type="number" placeholder="0.00" id="calc-input1"></div>
+                        <div class="calc-input"><span class="calc-text-span">Rs:</span><input type="number"
+                                placeholder="0.00" id="calc-input1"></div>
                     </div>
                     <div>
                         <div class="calc-text">
                             <p>Savings for the future </p>
-                            <p>Rs:</p>
                         </div>
-                        <div class="calc-input"><input type="number" placeholder="0.00" id="calc-input2"></div>
+                        <div class="calc-input"><span class="calc-text-span">Rs:</span><input type="number"
+                                placeholder="0.00" id="calc-input2"></div>
                     </div>
                     <div>
                         <div class="calc-text">
                             <p>Money you have loaned </p>
-                            <p>Rs:</p>
                         </div>
-                        <div class="calc-input"><input type="number" placeholder="0.00" id="calc-input3"></div>
+                        <div class="calc-input"><span class="calc-text-span">Rs:</span><input type="number"
+                                placeholder="0.00" id="calc-input3"></div>
                     </div>
                     <div>
                         <div class="calc-text">
                             <p>Business investments</p>
-                            <p>Rs:</p>
                         </div>
-                        <div class="calc-input"><input type="number" placeholder="0.00" id="calc-input4"></div>
+                        <div class="calc-input"><span class="calc-text-span">Rs:</span><input type="number"
+                                placeholder="0.00" id="calc-input4"></div>
                     </div>
                     <h3>Business Assets</h3>
                     <div>
                         <div class="calc-text">
                             <p>Stock value</p>
-                            <p>Rs:</p>
                         </div>
-                        <div class="calc-input"><input type="number" placeholder="0.00" id="calc-input5"></div>
+                        <div class="calc-input"><span class="calc-text-span">Rs:</span><input type="number"
+                                placeholder="0.00" id="calc-input5"></div>
                     </div>
                 </div>
 
@@ -329,31 +391,31 @@
                     <div>
                         <div class="calc-text">
                             <p>Value of silver and gold you possess</p>
-                            <p>Rs:</p>
                         </div>
-                        <div class="calc-input"><input type="number" placeholder="0.00" id="calc-input6"></div>
+                        <div class="calc-input"><span class="calc-text-span">Rs:</span><input type="number"
+                                placeholder="0.00" id="calc-input6"></div>
                     </div>
                     <h3>Liabilities</h3>
                     <div>
                         <div class="calc-text">
                             <p>Money owed (borrowed or credit)</p>
-                            <p>Rs:</p>
                         </div>
-                        <div class="calc-input"><input type="number" placeholder="0.00" id="calc-input7"></div>
+                        <div class="calc-input"><span class="calc-text-span">Rs:</span><input type="number"
+                                placeholder="0.00" id="calc-input7"></div>
                     </div>
                     <div>
                         <div class="calc-text">
                             <p>Employees’ salaries</p>
-                            <p>Rs:</p>
                         </div>
-                        <div class="calc-input"><input type="number" placeholder="0.00" id="calc-input8"></div>
+                        <div class="calc-input"><span class="calc-text-span">Rs:</span><input type="number"
+                                placeholder="0.00" id="calc-input8"></div>
                     </div>
                     <div>
                         <div class="calc-text">
                             <p>Other outgoings due (tax, rent, utilities)</p>
-                            <p>Rs:</p>
                         </div>
-                        <div class="calc-input"><input type="number" placeholder="0.00" id="calc-input9"></div>
+                        <div class="calc-input"><span class="calc-text-span">Rs:</span><input type="number"
+                                placeholder="0.00" id="calc-input9"></div>
                     </div>
 
 
@@ -367,7 +429,7 @@
                     <h3>Your current assets are worth </h3>
                     <h2 id="all-calc">Rs: 0.00</h2>
                 </div>
-                <div style="border: none !important;">
+                <div>
                     <h3>The value of your payable Zakat is </h3>
                     <h2 id="zakat-value">Rs:0.00</h2>
                 </div>
@@ -385,11 +447,9 @@
     <div class="calc-imgbar">
         <div class="chotadiv">
             <img src="img/kid.jpg" alt="" class="imgbar-img1">
-            <h2>
+            <h2 class="zakat-imgbar-h2">
                 zakat frequently
                 asked</h2>
-            <br>
-            <br>
             <h3>QUESTIONS ? </h3>
 
         </div>
@@ -427,9 +487,6 @@
                 Add up all your total assets. <br>
                 Subtract liabilities and debts. <br>
                 Ensure the remaining amount exceeds the Nisab threshold. <br>
-
-
-
             </p>
         </div>
     </div>
@@ -442,7 +499,8 @@
                 helps build a more just and caring society.</p>
         </div>
         <div class="chotadiv3">
-            <img src="img/pay-zakat.jpeg" alt="">
+            <img src="images/acts-charity-prevalent-makar-sankranti-with-volunteers-distributing-warm-clothes-food-s (2).jpg"
+                alt="">
         </div>
     </div>
 
@@ -455,7 +513,6 @@
         </a>
 
     </div>
-
     <div class="infobar3" id="infobar3">
         <div class="info3inner1">
             <div class="volunter">
@@ -486,6 +543,12 @@
                             <h3>Women Vocational Training Program</h3>
                         </div>
                     </a>
+                    <a href="food-security.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-hand-heart-line"></i>
+                            <h3>Food Security</h3>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="events">
@@ -509,15 +572,15 @@
                             <h3>Free Cataract Surgeries</h3>
                         </div>
                     </a>
-                </div>
-
-                <div class="events">
                     <a href="Freejudiciary.html" class="clickable-item">
                         <div class="eventinner">
                             <i class="ri-community-line"></i>
                             <h3>Free Judiciary Services</h3>
                         </div>
                     </a>
+                </div>
+
+                <div class="events event3">
 
                     <a href="Water-for-Life.html" class="clickable-item">
                         <div class="eventinner">
@@ -563,51 +626,10 @@
         </div>
     </div>
 
-
-    <!-- second navbar -->
-    <div class="secondnav" id="second">
-        <div class="img">
-            <img src="images/Medical Monogram-02.png" alt="logo" class="header2-logo"
-                onclick="window.location.href='index.html' ">
-        </div>
-
-        <div>
-            <h5 class="border" style="padding-right: 1vw;" id="zakat2">ZAKAT <i class="ri-arrow-down-s-line"
-                    style=" color: black !important;"></i></h5>
-        </div>
-
-        <div>
-            <h5 class="border" style="padding-right: 1vw;" id="involved2">OUR PROJECTS<i class="ri-arrow-down-s-line"
-                    style=" color: black !important;"></i></h5>
-        </div>
-        <div>
-            <h5 class="border" style="padding-right: 1vw;" id="about2" onclick="window.location.href = 'about.html'">
-                ABOUT US </h5>
-        </div>
-
-
-        <div>
-            <p class="border" style="padding-right: 1.2vw;">EN <i class="ri-arrow-down-s-line"></i>&nbsp;</p>
-        </div>
-        <div style="padding-right: 1.2vw;">
-            <small onclick="window.location.href ='contact.html' " class="contact">CONTACT US</small>
-        </div>
-        <div style="padding-right: 1.2vw;">
-            <small onclick=" window.location.href = 'zakat-calculator.html' ">ZAKAT CALCULATOR</small>
-        </div>
-        <div>
-            <button style="margin-left: 3vw;" onclick="window.location.href = 'donate.html'">DONATE NOW <i
-                    class="ri-arrow-right-s-line"></i></button>
-        </div>
-    </div>
-    <!-- second navbar -->
-
     <div id="icons">
         <div><a href="https://www.linkedin.com/in/healing-hands/" target="_blank"><i class="ri-linkedin-fill"></i></a>
         </div>
     </div>
-
-
 
     <div class="footer">
         <div class="footerinner1">
@@ -658,13 +680,7 @@
                     company 2433.</p>
             </div>
         </div>
-
-        <div class="foooterlastinner">
-            <h6>Terms & Condition</h6>
-            <h6>Privacy Policy</h6>
-        </div>
     </footer>
-
 
 
 

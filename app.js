@@ -1,32 +1,156 @@
 
 
-// Accordion Functionality
-const accordions = document.querySelectorAll(".accordion");
+// Mobile Navigation Functionality
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+if (mobileMenuToggle) {
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const mobileNavMenu = document.getElementById('mobileNavMenu');
+    const mobileNavClose = document.getElementById('mobileNavClose');
 
-accordions.forEach((acc) => {
-    const header = acc.querySelector(".accordion-header");
-    const content = acc.querySelector(".accordion-content");
+    // Toggle mobile menu
+    function toggleMobileMenu() {
+        mobileMenuToggle.classList.toggle('active');
+        mobileNavOverlay.classList.toggle('active');
+        mobileNavMenu.classList.toggle('active');
+        document.body.style.overflow = mobileNavMenu.classList.contains('active') ? 'hidden' : '';
+    }
 
-    header.addEventListener("click", () => {
-        const openAcc = document.querySelector(".accordion-header.active");
-        if (openAcc && openAcc !== header) {
-            openAcc.classList.remove("active");
-            openAcc.nextElementSibling.style.maxHeight = 0;
-        }
+    // Close mobile menu
+    function closeMobileMenu() {
+        mobileMenuToggle.classList.remove('active');
+        mobileNavOverlay.classList.remove('active');
+        mobileNavMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }
 
-        header.classList.toggle("active");
-        if (header.classList.contains("active")) {
-            content.style.maxHeight = content.scrollHeight + "px";
-        } else {
-            content.style.maxHeight = 0;
+    // Event listeners for mobile navigation
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    }
+
+    if (mobileNavClose) {
+        mobileNavClose.addEventListener('click', closeMobileMenu);
+    }
+
+    if (mobileNavOverlay) {
+        mobileNavOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close mobile menu when clicking on navigation links
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close mobile menu on window resize if screen becomes larger
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMobileMenu();
         }
     });
-});
 
+    // Toggle mobile navigation sections
+    function toggleMobileSection(header) {
+        const section = header.parentElement;
+        const links = section.querySelector('.mobile-nav-links');
+        const arrow = header.querySelector('i');
 
+        // Toggle active class on header
+        header.classList.toggle('active');
 
+        // Toggle active class on links
+        links.classList.toggle('active');
+
+        // Rotate arrow if it exists
+        if (arrow) {
+            if (header.classList.contains('active')) {
+                arrow.style.transform = 'rotate(180deg)';
+            } else {
+                arrow.style.transform = 'rotate(0deg)';
+            }
+        }
+    }
+
+    // Add click event listeners to mobile nav section headers
+    const mobileNavHeaders = document.querySelectorAll('.mobile-nav-section h4');
+    mobileNavHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            toggleMobileSection(header);
+        });
+    });
+
+    // Accordion Functionality
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach((acc) => {
+        const header = acc.querySelector(".accordion-header");
+        const content = acc.querySelector(".accordion-content");
+
+        header.addEventListener("click", () => {
+            const openAcc = document.querySelector(".accordion-header.active");
+            if (openAcc && openAcc !== header) {
+                openAcc.classList.remove("active");
+                openAcc.nextElementSibling.style.maxHeight = 0;
+            }
+
+            header.classList.toggle("active");
+            if (header.classList.contains("active")) {
+                content.style.maxHeight = content.scrollHeight + "px";
+            } else {
+                content.style.maxHeight = 0;
+            }
+        });
+    });
+
+}
+
+// addition
+const donateBox = document.getElementById('donate-bar')
+const add_cart_detail = document.getElementById('add-cart-detail')
+const add_card_number = document.getElementById('add-card-number')
+const add_card_allrupee = document.getElementById('add-card-allrupee')
+const add_cart_small = document.getElementById('add-cart-small')
+// const cart = document.getElementById('cart')
+const cart_div = document.getElementById('cart-div')
+let arr = JSON.parse(localStorage.getItem('payment')) || [];
+function showcart() {
+    if (arr.length == '') {
+        add_cart_detail.style.display = 'none'
+        cart_div.style.display = 'none'
+    } else {
+        cart_div.style.display = 'block'
+        add_cart_detail.style.display = 'flex'
+        add_card_number.innerText = arr.length;
+        let all = localStorage.getItem('donation_total')
+        add_card_allrupee.innerText = `PKR ${all}`
+    }
+}
+showcart()
+
+add_cart_detail.addEventListener('click', () => {
+    donateBox.style.opacity = 1
+    donateBox.style.visibility = 'visible'
+    donateBox.style.transform = 'translatex(0)'
+    donateBox.style.right = 0
+    showcarts()
+})
+
+cart_div.addEventListener('click', () => {
+    donateBox.style.opacity = 1
+    donateBox.style.visibility = 'visible'
+    donateBox.style.transform = 'translatex(0)'
+    donateBox.style.right = 0
+    showcarts()
+})
+add_cart_small.addEventListener('click', () => {
+    donateBox.style.opacity = 1
+    donateBox.style.visibility = 'visible'
+    donateBox.style.transform = 'translatex(0)'
+    donateBox.style.right = 0
+    showcarts()
+})
+// addition
 const second = document.getElementById('second')
-
 const zakat = document.getElementById('zakat')
 const envolved = document.getElementById('envolved')
 const input = document.getElementById('input')
@@ -140,8 +264,7 @@ const calcInput9 = document.getElementById('calc-input9')
 const showcalc = document.getElementById('all-calc')
 const zakatValue = document.getElementById('zakat-value')
 const reset = document.getElementById('reset')
-const donateBox = document.getElementById('donate-bar')
-const zakat_pay = document.getElementById('zakat-pay')
+// const zakat_pay = document.getElementById('zakat-pay')
 const all_zakat_show = document.getElementById('all-zakat-show')
 const total_2 = document.getElementById('total-2')
 const zakat_pay_value = document.getElementById('zakatvalue')
@@ -153,40 +276,81 @@ const zakat_pay_value4 = document.getElementById('zakatvalue4')
 const donate = document.getElementById('donate')
 const already_calc_zakat_inp = document.getElementById('already-calc-zakat-inp')
 const already_calc_zakat_btn = document.getElementById('already-calc-zakat-btn')
-const plus = document.getElementById('plus')
-const counter = document.getElementById('counter')
+
 const check_box1 = document.getElementById('check-box1')
 const check_box2 = document.getElementById('check-box2')
 const check_box3 = document.getElementById('check-box3')
 const donate_now = document.getElementById('doante-now')
 const donate_now_value = document.getElementById('donate-now-value')
 const donateinput = document.getElementById('donate-input')
-const cancel = document.getElementById('cancel')
+// const cancel = document.getElementById('cancel')
+const donate_1000 = document.getElementById('donate-1000')
+const donate_5000 = document.getElementById('donate-5000')
+const donate_10000 = document.getElementById('donate-10000')
+const quick_donate_responsive = document.getElementById('quick-donate-responsive')
+const donate_other = document.getElementById('donate-other')
+const donate_input = document.getElementById('donate-input-responsive')
+const input_div_box = document.getElementById('input-div-box')
+const select_div_box = document.getElementById('select-div-box')
+const payment_type = document.getElementById('payment-type')
+const donate_type = document.getElementById('donate-type')
+const donate_type2 = document.getElementById('donate-type2')
+const zakat_title = document.getElementById('zakat-title')
+const zakat_description = document.getElementById('zakat-description')
+
 if (donate_now) {
-    donate_now_value.addEventListener('change', () => {
-        // alert('adssa')
-        if (donate_now_value.value == 'other') {
-            donateinput.style.display = 'block'
-            return;
-        } else {
-            donateinput.style.display = 'none'
-        }
-    })
+donate_now_value.addEventListener('change', () => {
+    if (donate_now_value.value == 'other') {
+        select_div_box.innerHTML = `
+             <input type="number" step="0.01" placeholder="Enter Amount" id="donate-input">`
+    }
+})
 
-    donate_now.addEventListener('click', () => {
-        if (donate_now_value.value == 'other') {
-            donate2(`PKR ${donateinput.value}`)
-            return;
-        }
-        donate2(donate_now_value.value)
-    })
 
+donate_now.addEventListener('click', () => {
+
+    const donateinput = document.getElementById('donate-input')
+    if (donate_now_value.value == 'other') {
+        donate2(`PKR ${donateinput.value}`, donate_type.value, payment_type.value)
+        return;
+    }
+    donate2(donate_now_value.value, donate_type.value, payment_type.value)
+})
+const checkboxes = document.querySelectorAll(".single-check");
+
+checkboxes.forEach((box) => {
+    box.addEventListener("change", () => {
+        if (box.checked) {
+            checkboxes.forEach((other) => {
+                if (other !== box) other.checked = false;
+            });
+        }
+    });
+});
+input_div_box.addEventListener('click', () => {
+    donate_other.checked = true
+})
+// donate_input.addEventListener('click', () => {
+//     donate_1000.style.backgroundColor = 
+// })
+
+
+quick_donate_responsive.addEventListener('click', () => {
+    // console.log(donate_type2.value);
+    // console.log(payment_type.value);
+    if (donate_1000.checked) {
+        donate2('PKR 1000', donate_type2.value, payment_type.value)
+    }
+    else if (donate_5000.checked) {
+        donate2('PKR 5000', donate_type2.value, payment_type.value)
+    }
+    else if (donate_10000.checked) {
+        donate2('PKR 10000', donate_type2.value, payment_type.value)
+    } else {
+        donate2(`PKR ${donate_input.value}`, donate_type2.value, payment_type.value)
+    }
+})
 }
-
-
-
-
-
 
 if (reset) {
 
@@ -394,7 +558,7 @@ if (reset) {
             toastr.info("Value is required and can't be empty")
             return;
         } else {
-            donate2(`PKR ${already_calc_zakat_inp.value}`)
+            donate2(`PKR ${already_calc_zakat_inp.value}`, 'ZAKAT', 'YEARLY PAYMENT')
         }
     })
 
@@ -403,111 +567,199 @@ if (reset) {
             toastr.info("Value is required and can't be empty")
             return;
         } else {
-            donate2(zakatValue.innerText)
+            donate2(zakatValue.innerText, 'ZAKAT', 'YEARLY PAYMENT')
         }
     })
 }
 
+const zakat_calc = document.getElementById('zakat-calc')
+function updateTotal() {
 
-function donate2(abc) {
-
-    all_zakat_show.innerText = abc
-    total_2.innerText = abc
+    let total = 0;
+    document.querySelectorAll('.amount').forEach(a => {
+        total += parseInt(a.innerHTML.replace(/[^0-9]/g, '')) || 0;
+    });
+    document.getElementById('all_zakat_show').innerText = `PKR ${total}`;
+    localStorage.setItem('donation_total', total);
+}
+function donate2(abc, donate_type, payment_type) {
     donateBox.style.opacity = 1
     donateBox.style.visibility = 'visible'
     donateBox.style.transform = 'translatex(0)'
     donateBox.style.right = 0
-    zakat_pay.style.display = 'flex'
-    zakat_pay_value.innerText = abc
-
-    let count = 1
-
-    plus.addEventListener('click', () => {
-        count++
-        counter.innerText = count
-        zakat_pay_value.innerText = `PKR ${Number(abc.slice(3) * count)}`
-        all_zakat_show.innerText = total_2.innerText = `PKR ${Number(zakat_pay_value.innerText.slice(3))}`
-    })
-
-    const minus = document.getElementById('minus')
-    minus.addEventListener('click', () => {
-        if (count <= 0) {
-            all_zakat_show.innerText = total_2.innerText = zakat_pay_value.innerText
-        } else {
-            count--
-            counter.innerText = count;
-            // console.log(zakat_pay_value.innerText.slice(4));
-            zakat_pay_value.innerText = `PKR ${Number(abc.slice(3) * count)}`
-            all_zakat_show.innerText = total_2.innerText = zakat_pay_value.innerText
+    console.log(arr);
+    if (arr.length == 0) {
+        const obj = {
+            payment_type: payment_type,
+            donate_type: donate_type,
+            amount: abc,
+            quantity: 1
         }
-    })
+        arr.push(obj)
+        localStorage.setItem('payment', JSON.stringify(arr))
+        showcart()
+        showcarts()
+        updateTotal()
+        return;
+    }
+    const exists = arr.some(e => e.donate_type === donate_type);
+    // Agar nahi hai to hi push karo
+    if (!exists) {
+        const obj = {
+            payment_type: payment_type,
+            donate_type: donate_type,
+            amount: abc,
+            quantity: 1
+        };
+        arr.push(obj);
+        localStorage.setItem('payment', JSON.stringify(arr));
+        showcart();
+        showcarts();
+        updateTotal();
+    } else {
+        showcarts(); // agar already exist karta hai to sirf cart refresh kar lo
+    }
+
+}
+const add_another = document.getElementById('add-another')
+add_another.addEventListener('click', () => {
+    donateBox.style.opacity = 0
+    donateBox.style.visibility = 'hidden'
+    donateBox.style.transform = 'translatex(15px)'
+    donateBox.style.right = 0
+    showcart()
+    addcartload()
+})
 
 
-    const add_another = document.getElementById('add-another')
-    const checkout = document.getElementById('checkout')
-    const donateBox2 = document.getElementById('donate-bar2')
 
-    add_another.addEventListener('click', () => {
-        donateBox.style.opacity = 0
-        donateBox.style.visibility = 'hidden'
-        donateBox.style.transform = 'translatex(15px)'
-        donateBox.style.right = 0
-        donateBox2.style.opacity = 0
-        donateBox2.style.visibility = 'hidden'
-        donateBox2.style.transform = 'translatex(15px)'
-        donateBox2.style.right = 0
-    })
-    checkout.addEventListener('click', () => {
-        donateBox2.style.opacity = 1
-        donateBox2.style.visibility = 'visible'
-        donateBox2.style.transform = 'translatex(0px)'
-        donateBox.style.right = '29.5%'
-    })
-
-
-
-
-
-
-
-    cancel.addEventListener('click', () => {
-        donateBox.style.opacity = 0
-        donateBox.style.visibility = 'hidden'
-        donateBox.style.transform = 'translatex(15px)'
-        donateBox2.style.opacity = 0
-        donateBox2.style.visibility = 'hidden'
-        donateBox2.style.transform = 'translatex(15px)'
-    })
-
+function cancel() {
+    donateBox.style.opacity = 0
+    donateBox.style.visibility = 'hidden'
+    donateBox.style.transform = 'translatex(15px)'
+    showcart()
+    // addcartload()
 }
 
 function add_cart() {
-    localStorage.setItem('total', all_zakat_show.innerText)
     window.location.href = `add-cart.html`;
 }
-function remove() {
-    all_zakat_show.innerText = total_2.innerText = `RS:${Number(all_zakat_show.innerText.slice(3) - zakat_pay_value.innerText.slice(3))}`
-    zakat_pay.style.display = 'none'
+
+function showcarts() {
+    updateTotal()
+    zakat_calc.innerHTML = ``
+    // Render donation boxes
+    arr.forEach((e, index) => {
+        zakat_calc.innerHTML += `
+        <div class="zakat-pay" data-index="${index}">
+            <div>
+                <h3>${e.donate_type}</h3>
+                <p>${e.payment_type}</p>
+                <div class="counter-box">
+                    <div class="minus" data-index="${index}"><i class="ri-subtract-line"></i></div>
+                    <div class="counter" data-index="${index}">${e.quantity || 1}</div>
+                    <div class="plus" data-index="${index}"><i class="ri-add-line"></i></div>
+                </div>
+            </div>
+
+            <div>
+                <h3 class="amount" data-index="${index}">${e.amount}</h3>
+                <p><a href="#" class="remove" data-index="${index}">Remove</a></p>
+            </div>
+        </div>
+    `
+    })
+
+    // Select elements
+    const plusBtns = document.querySelectorAll('.plus')
+    const minusBtns = document.querySelectorAll('.minus')
+    const counters = document.querySelectorAll('.counter')
+    const amounts = document.querySelectorAll('.amount')
+    const removeBtns = document.querySelectorAll('.remove')
+
+    // PLUS
+    plusBtns.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+            updateTotal()
+            let count = Number(counters[i].innerText)
+            count++
+            counters[i].innerText = count
+
+            const baseAmount = parseInt(arr[i].amount.toString().replace(/[^0-9]/g, '')) / (arr[i].quantity || 1)
+            const total = baseAmount * count
+            amounts[i].innerText = `PKR ${total}`
+
+            // Update array + localStorage
+            arr[i].quantity = count
+            arr[i].amount = total
+            localStorage.setItem('payment', JSON.stringify(arr))
+            // updateTotal()
+
+        })
+    })
+
+    // MINUS
+    minusBtns.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+            updateTotal()
+            let count = Number(counters[i].innerText)
+            if (count > 1) {
+                count--
+                counters[i].innerText = count
+                const baseAmount = parseInt(arr[i].amount.toString().replace(/[^0-9]/g, '')) / (arr[i].quantity || 1)
+                const total = baseAmount * count
+                amounts[i].innerText = `PKR ${total}`
+                // Update array + localStorage
+                arr[i].quantity = count
+                arr[i].amount = total
+                localStorage.setItem('payment', JSON.stringify(arr))
+            }
+        })
+    })
+
+    // REMOVE
+    removeBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault()
+            const index = e.target.getAttribute('data-index') || e.target.parentElement.getAttribute('data-index')
+
+            // Remove from array
+            arr.splice(index, 1)
+
+            // Save updated array to localStorage
+            localStorage.setItem('payment', JSON.stringify(arr))
+
+            // Remove from DOM
+            document.querySelector(`.zakat-pay[data-index="${index}"]`).remove()
+            updateTotal()
+        })
+    })
 }
 
-
-
-
-
-
+function addcartload() {
+    const zakat_calc = document.getElementById('zakat-calc2')
+    // Render donation boxes
+    zakat_calc.innerHTML = ``
+    arr.forEach((e, index) => {
+        zakat_calc.innerHTML += `
+            <div class="zakat-pay" data-index="${index}">
+                <div>
+                    <h3>${e.donate_type}</h3>
+                    <p>${e.payment_type}</p>
+                </div>
+                <div>
+                    <h3 class="amount abc" data-index="${index}">${e.amount}</h3>
+                </div>
+            </div>
+        `
+    })
+    let get_total = localStorage.getItem('donation_total')
+    const info_zakat_show = document.getElementById('total-zakat-show')
+    info_zakat_show.innerText = `PKR ${get_total}`
+}
 
 if (location.pathname == '/add-cart.html') {
-    let get_total = localStorage.getItem('total')
-    const info_zakat_show = document.getElementById('info-zakat-show')
-    info_zakat_show.innerText = get_total
-    const total_zakat_show = document.getElementById('total-zakat-show')
-    total_zakat_show.innerText = get_total
-
-
-
-
-
-
+    addcartload()
 
     const select = document.getElementById('select')
     const select2 = document.getElementById('select2')

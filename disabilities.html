@@ -36,11 +36,43 @@
 
 <body>
 
+    <!-- Two-Tier Header for Mobile -->
+    <div class="main-header">
+        <!-- First Tier: Logo and Donate Button -->
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="header-logo-section">
+                    <img src="images/Medical Monogram-02.png" alt="logo" class="header-logo"
+                        onclick="window.location.href='index.html'">
+                    <div class="header-title">Healing Hands</div>
+                </div>
+                <button class="donate-btn" onclick="window.location.href='donate.html'">
+                    DONATE
+                </button>
+            </div>
+        </div>
 
+        <!-- Second Tier: Menu and Search -->
+        <div class="header-bottom">
+            <div class="header-bottom-content">
+                <div class="menu-section">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        ☰
+                    </button>
+                    <span class="menu-text">MENU</span>
+                </div>
+                <div class="search-section">
+                    <input type="text" class="search-input" placeholder="SEARCH">
+                    <i class="ri-search-line search-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
     <header>
-        <nav>
+        <!-- Desktop Navigation -->
+        <nav id="navbar" class="desktop-nav">
             <div class="navinner1">
                 <img src="images/Medical Monogram-02.png" alt="logo" class="header-logo"
                     onclick="window.location.href='index.html' ">
@@ -68,6 +100,11 @@
                     <h3 id="about" onclick="window.location.href = 'about.html'">ABOUT US</h3>
                 </div>
             </div>
+            <div id="add-cart-detail">
+                <h2>CART</h2>
+                <h3 id="add-card-number"></h3>
+                <h5 id="add-card-allrupee"></h5>
+            </div>
             <div class="navinner3">
                 <p>Call us for information</p>
                 <strong style="margin-top: 0.3vw;"><a href="tel:+923460134753">0346-0134753</a></strong>
@@ -83,6 +120,111 @@
         </h6>
     </header>
 
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-logo-section">
+                <img src="images/Medical Monogram-02.png" alt="logo" class="mobile-nav-logo">
+                <h3>Healing Hands</h3>
+            </div>
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+
+        <div class="mobile-nav-content">
+            <!-- Add-cart -->
+            <div class="mobile-nav-section" id="cart-div">
+                <h4 id="cart">Cart</h4>
+            </div>
+            <!-- Main Navigation -->
+            <div class="mobile-nav-section">
+                <h4>Pages <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="about.html"><i class="ri-information-line"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="ri-phone-line"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Zakat Section -->
+            <div class="mobile-nav-section">
+                <h4>Zakat <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="donate.html"><i class="ri-heart-line"></i> Donate Zakat</a></li>
+                    <li><a href="zakat-calculator.html"><i class="ri-calculator-line"></i> Zakat Calculator</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Projects Section -->
+            <div class="mobile-nav-section">
+                <h4>Ongoing Projects <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="Dispensaries.html"><i class="ri-hospital-line"></i> Welfare Dispensaries</a></li>
+                    <li><a href="disabilities.html"><i class="ri-wheelchair-line"></i> Disabilities Rehabilitation</a>
+                    </li>
+                    <li><a href="Women.html"><i class="ri-team-line"></i> Women Vocational Training</a></li>
+                    <li><a href="Education.html"><i class="ri-book-line"></i> Education Assistance</a></li>
+                    <li><a href="Free-medical.html"><i class="ri-stethoscope-line"></i> Free Medical Camps</a></li>
+                    <li><a href="Free-cataract.html"><i class="ri-eye-line"></i> Free Cataract Surgeries</a></li>
+                    <li><a href="Freejudiciary.html"><i class="ri-scales-line"></i> Free Judiciary Services</a></li>
+                    <li><a href="Water-for-Life.html"><i class="ri-drop-line"></i> Water for Life</a></li>
+                    <li><a href="Empowering.html"><i class="ri-heart-pulse-line"></i> Empowering Polio Heroes</a></li>
+                    <li><a href="food-security.html"><i class="ri-restaurant-line"></i>Food Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Upcoming Projects -->
+            <div class="mobile-nav-section">
+                <h4>Upcoming Projects <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="50bed.html"><i class="ri-hospital-line"></i> 50-Bed Hospital</a></li>
+                    <li><a href="orphan.html"><i class="ri-heart-line"></i> Orphan Assistance</a></li>
+                </ul>
+            </div>
+
+            <!-- Actions -->
+            <div class="mobile-nav-actions">
+                <button class="mobile-donate-btn" onclick="window.location.href='donate.html'">
+                    <i class="ri-heart-line"></i> Donate Now
+                </button>
+
+                <div class="mobile-nav-contact">
+                    <p>Call us for information</p>
+                    <a href="tel:+923460134753">0346-0134753</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- donate bars -->
+    <div class="donate-bar" id="donate-bar">
+        <div id="cancel"><i class="ri-close-fill" onclick="cancel()"></i></div>
+        <h3><i class="ri-check-fill"></i> Donation Added</h3>
+        <h4>You are donating to <span></span></h4>
+
+
+        <div id="zakat-calc">
+
+        </div>
+
+        <div class="all-calc">
+            <div>
+                <h3>Donations</h3>
+                <h3 id="all_zakat_show"></h3>
+            </div>
+            <div>
+                <button id="add-another">ADD ANOTHER <i class="ri-arrow-right-s-line"></i></button>
+                <button onclick="window.location.href='add-cart.html'" id="checkout">CHECKOUT <i
+                        class="ri-arrow-right-s-line"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- donate bars -->
     <!-- second navbar -->
     <div class="secondnav" id="second">
         <div class="img">
@@ -99,6 +241,7 @@
             <h5 class="border" style="padding-right: 1vw;" id="involved2">OUR PROJECTS<i class="ri-arrow-down-s-line"
                     style=" color: black !important;"></i></h5>
         </div>
+
         <div>
             <h5 class="border" style="padding-right: 1vw;" id="about2" onclick="window.location.href = 'about.html'">
                 ABOUT US </h5>
@@ -114,12 +257,16 @@
         <div style="padding-right: 1.2vw;">
             <small onclick=" window.location.href = 'zakat-calculator.html' ">ZAKAT CALCULATOR</small>
         </div>
+        <div class="cart-small" style="padding-right: 1.2vw;" id="add-cart-small">
+            <small>CART</small>
+        </div>
         <div>
             <button style="margin-left: 3vw;" onclick="window.location.href = 'donate.html'">DONATE NOW <i
                     class="ri-arrow-right-s-line"></i></button>
         </div>
     </div>
     <!-- second navbar -->
+
 
     <div class="infobar2" id="infobar2">
         <a href="zakat-calculator.html">
@@ -158,6 +305,12 @@
                             <h3>Women Vocational Training Program</h3>
                         </div>
                     </a>
+                    <a href="food-security.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-hand-heart-line"></i>
+                            <h3>Food Security</h3>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="events">
@@ -181,15 +334,15 @@
                             <h3>Free Cataract Surgeries</h3>
                         </div>
                     </a>
-                </div>
-
-                <div class="events">
                     <a href="Freejudiciary.html" class="clickable-item">
                         <div class="eventinner">
                             <i class="ri-community-line"></i>
                             <h3>Free Judiciary Services</h3>
                         </div>
                     </a>
+                </div>
+
+                <div class="events event3">
 
                     <a href="Water-for-Life.html" class="clickable-item">
                         <div class="eventinner">
@@ -236,7 +389,6 @@
     </div>
 
 
-
     <!-- image Section -->
     <div class="imagesection">
 
@@ -260,7 +412,7 @@
     </div>
     <!-- image Section -->
 
-  <div id="icons">
+    <div id="icons">
         <div><a href="https://www.linkedin.com/in/healing-hands/" target="_blank"><i class="ri-linkedin-fill"></i></a>
         </div>
     </div>
@@ -313,11 +465,6 @@
                 <p>© Copyright 2025. Healing Hands Welfare Trust® is a registered charity in Pakistan & registered
                     company 2433.</p>
             </div>
-        </div>
-
-        <div class="foooterlastinner">
-            <h6>Terms & Condition</h6>
-            <h6>Privacy Policy</h6>
         </div>
     </footer>
     <!-- footer -->

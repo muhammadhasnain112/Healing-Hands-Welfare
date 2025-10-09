@@ -32,9 +32,41 @@
 </head>
 
 <body>
+    <!-- Two-Tier Header for Mobile -->
+    <div class="main-header">
+        <!-- First Tier: Logo and Donate Button -->
+        <div class="header-top">
+            <div class="header-top-content">
+                <div class="header-logo-section">
+                    <img src="images/Medical Monogram-02.png" alt="logo" class="header-logo"
+                        onclick="window.location.href='index.html'">
+                    <div class="header-title">Healing Hands</div>
+                </div>
+                <button class="donate-btn" onclick="window.location.href='donate.html'">
+                    DONATE
+                </button>
+            </div>
+        </div>
 
-    <!-- <header> -->
-    <nav>
+        <!-- Second Tier: Menu and Search -->
+        <div class="header-bottom">
+            <div class="header-bottom-content">
+                <div class="menu-section">
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        ☰
+                    </button>
+                    <span class="menu-text">MENU</span>
+                </div>
+                <div class="search-section">
+                    <input type="text" class="search-input" placeholder="SEARCH">
+                    <i class="ri-search-line search-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav id="navbar" class="desktop-nav">
         <div class="navinner1">
             <img src="images/Medical Monogram-02.png" alt="logo" class="header-logo"
                 onclick="window.location.href='index.html' ">
@@ -62,6 +94,11 @@
                 <h3 id="about" onclick="window.location.href = 'about.html'">ABOUT US</h3>
             </div>
         </div>
+        <div id="add-cart-detail">
+            <h2>CART</h2>
+            <h3 id="add-card-number"></h3>
+            <h5 id="add-card-allrupee"></h5>
+        </div>
         <div class="navinner3">
             <p>Call us for information</p>
             <strong style="margin-top: 0.3vw;"><a href="tel:+923460134753">0346-0134753</a></strong>
@@ -70,57 +107,104 @@
         </div>
     </nav>
 
-    <!-- donate bars -->
-    <div id="donate-bar2">
-        <h3>Checkout</h3>
-        <h4>Help us further</h4>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-        <div class="total">
-            <div>
-                <h3>Total</h3>
-                <h3 id="total-2">Rs:0.00</h3>
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav-menu" id="mobileNavMenu">
+        <div class="mobile-nav-header">
+            <div class="mobile-nav-logo-section">
+                <img src="images/Medical Monogram-02.png" alt="logo" class="mobile-nav-logo">
+                <h3>Healing Hands</h3>
             </div>
-            <div><button onclick="add_cart()">Complete Donation <i class="ri-arrow-right-s-line"></i></button></div>
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="ri-close-line"></i>
+            </button>
         </div>
 
+        <div class="mobile-nav-content">
+            <!-- Add-cart -->
+            <div class="mobile-nav-section" id="cart-div">
+                <h4 id="cart">Cart</h4>
+            </div>
+            <!-- Main Navigation -->
+            <div class="mobile-nav-section">
+                <h4>Pages <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="about.html"><i class="ri-information-line"></i> About Us</a></li>
+                    <li><a href="contact.html"><i class="ri-phone-line"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Zakat Section -->
+            <div class="mobile-nav-section">
+                <h4>Zakat <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="donate.html"><i class="ri-heart-line"></i> Donate Zakat</a></li>
+                    <li><a href="zakat-calculator.html"><i class="ri-calculator-line"></i> Zakat Calculator</a></li>
+                </ul>
+            </div>
+
+            <!-- Our Projects Section -->
+            <div class="mobile-nav-section">
+                <h4>Ongoing Projects <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="Dispensaries.html"><i class="ri-hospital-line"></i> Welfare Dispensaries</a></li>
+                    <li><a href="disabilities.html"><i class="ri-wheelchair-line"></i> Disabilities Rehabilitation</a>
+                    </li>
+                    <li><a href="Women.html"><i class="ri-team-line"></i> Women Vocational Training</a></li>
+                    <li><a href="Education.html"><i class="ri-book-line"></i> Education Assistance</a></li>
+                    <li><a href="Free-medical.html"><i class="ri-stethoscope-line"></i> Free Medical Camps</a></li>
+                    <li><a href="Free-cataract.html"><i class="ri-eye-line"></i> Free Cataract Surgeries</a></li>
+                    <li><a href="Freejudiciary.html"><i class="ri-scales-line"></i> Free Judiciary Services</a></li>
+                    <li><a href="Water-for-Life.html"><i class="ri-drop-line"></i> Water for Life</a></li>
+                    <li><a href="Empowering.html"><i class="ri-heart-pulse-line"></i> Empowering Polio Heroes</a></li>
+                    <li><a href="food-security.html"><i class="ri-restaurant-line"></i>Food Security</a></li>
+                </ul>
+            </div>
+
+            <!-- Upcoming Projects -->
+            <div class="mobile-nav-section">
+                <h4>Upcoming Projects <i class="ri-arrow-down-s-line"></i></h4>
+                <ul class="mobile-nav-links">
+                    <li><a href="50bed.html"><i class="ri-hospital-line"></i> 50-Bed Hospital</a></li>
+                    <li><a href="orphan.html"><i class="ri-heart-line"></i> Orphan Assistance</a></li>
+                </ul>
+            </div>
+
+            <!-- Actions -->
+            <div class="mobile-nav-actions">
+                <button class="mobile-donate-btn" onclick="window.location.href='donate.html'">
+                    <i class="ri-heart-line"></i> Donate Now
+                </button>
+
+                <div class="mobile-nav-contact">
+                    <p>Call us for information</p>
+                    <a href="tel:+923460134753">0346-0134753</a>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- donate bars -->
     <div class="donate-bar" id="donate-bar">
-        <div id="cancel"><i class="ri-close-fill"></i></div>
+        <div id="cancel"><i class="ri-close-fill" onclick="cancel()"></i></div>
         <h3><i class="ri-check-fill"></i> Donation Added</h3>
         <h4>You are donating to <span></span></h4>
 
 
         <div id="zakat-calc">
-            <div id="zakat-pay">
-                <div>
-                    <h3>Zakat</h3>
-                    <p>Single Payment Zakat</p>
-                    <div>
-                        <div style="border-right: none !important;" id="minus"><i class="ri-subtract-line"></i></div>
-                        <div style="border-right: none !important;" id="counter">1</div>
-                        <div id="plus"><i class="ri-add-line"></i></div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 id="zakatvalue"></h3>
-                    <p><a href="#" onclick="remove()">Remove</a></p>
-                </div>
-            </div>
-
 
         </div>
 
         <div class="all-calc">
             <div>
                 <h3>Donations</h3>
-                <h3 id="all-zakat-show"></h3>
+                <h3 id="all_zakat_show"></h3>
             </div>
             <div>
-                <button style="background-color: rgb(199, 213, 24);" id="add-another">ADD ANOTHER <i
-                        class="ri-arrow-right-s-line"></i></button>
-                <button style="background-color:  rgb(0, 155, 131) ; color: #fff;" id="checkout">CHECKOUT <i
+                <button id="add-another">ADD ANOTHER <i class="ri-arrow-right-s-line"></i></button>
+                <button onclick="window.location.href='add-cart.html'" id="checkout">CHECKOUT <i
                         class="ri-arrow-right-s-line"></i></button>
             </div>
         </div>
@@ -138,7 +222,8 @@
         <div class="swiper-wrapper">
 
             <!-- Slide 1 -->
-            <div class="swiper-slide" style="background-image: url('images/sliderimages/EmpoweringLives.jpg');">
+            <div class="swiper-slide"
+                style="background-image: url('images/acts-charity-prevalent-makar-sankranti-with-volunteers-distributing-warm-clothes-food-s\ \(2\).jpg')">
                 <div class="slide-content">
                     <h2>Empowering Lives</h2>
                     <p>At Healing Hands, we provide lifesaving care, education, and sustainable support to
@@ -149,7 +234,8 @@
             </div>
 
             <!-- Slide 2 -->
-            <div class="swiper-slide" style="background-image: url('images/sliderimages/DeliveringHope.jpg');">
+            <div class="swiper-slide"
+                style="background-image: url('images/acts-charity-prevalent-makar-sankranti-with-volunteers-distributing-warm-clothes-food-s\ \(1\).jpg');">
                 <div class="slide-content">
                     <h2>Delivering Hope</h2>
                     <p>Read authentic Islamic resources and gain insights from scholars and writers worldwide.</p>
@@ -159,7 +245,8 @@
             </div>
 
             <!-- Slide 3 -->
-            <div class="swiper-slide" style="background-image: url('images/sliderimages/TransformingCommunities.jpg');">
+            <div class="swiper-slide"
+                style="background-image: url('images/Best-Hospital-Bed-Brands-01-0504060004.jpg');">
                 <div class="slide-content">
                     <h2>Transforming Communities</h2>
                     <p>Strengthen your faith by exploring authentic Islamic content curated for the community.</p>
@@ -195,6 +282,7 @@
             <h5 class="border" style="padding-right: 1vw;" id="involved2">OUR PROJECTS<i class="ri-arrow-down-s-line"
                     style=" color: black !important;"></i></h5>
         </div>
+
         <div>
             <h5 class="border" style="padding-right: 1vw;" id="about2" onclick="window.location.href = 'about.html'">
                 ABOUT US </h5>
@@ -209,6 +297,9 @@
         </div>
         <div style="padding-right: 1.2vw;">
             <small onclick=" window.location.href = 'zakat-calculator.html' ">ZAKAT CALCULATOR</small>
+        </div>
+        <div class="cart-small" style="padding-right: 1.2vw;" id="add-cart-small">
+            <small>CART</small>
         </div>
         <div>
             <button style="margin-left: 3vw;" onclick="window.location.href = 'donate.html'">DONATE NOW <i
@@ -254,6 +345,12 @@
                             <h3>Women Vocational Training Program</h3>
                         </div>
                     </a>
+                    <a href="food-security.html" class="clickable-item">
+                        <div class="eventinner">
+                            <i class="ri-hand-heart-line"></i>
+                            <h3>Food Security</h3>
+                        </div>
+                    </a>
                 </div>
 
                 <div class="events">
@@ -277,15 +374,15 @@
                             <h3>Free Cataract Surgeries</h3>
                         </div>
                     </a>
-                </div>
-
-                <div class="events">
                     <a href="Freejudiciary.html" class="clickable-item">
                         <div class="eventinner">
                             <i class="ri-community-line"></i>
                             <h3>Free Judiciary Services</h3>
                         </div>
                     </a>
+                </div>
+
+                <div class="events event3">
 
                     <a href="Water-for-Life.html" class="clickable-item">
                         <div class="eventinner">
@@ -337,12 +434,12 @@
             <h4>Quick Donate</h4>
         </div>
         <div>
-            <select name="" id="">
-                <option value="">Single Payment</option>
-                <option value="">Monthly Payment</option>
+            <select name="" id="payment-type">
+                <option value="SINGLE PAYMENT">Single Payment</option>
+                <option value="MONTHLY PAYMENT">Monthly Payment</option>
             </select>
         </div>
-        <div>
+        <div id="select-div-box">
             <select name="" id="donate-now-value">
                 <option value="PKR 1000">PKR 1000</option>
                 <option value="PKR 5000">PKR 5000</option>
@@ -351,19 +448,55 @@
             </select>
         </div>
         <div>
-            <input type="text" placeholder="Enter Amount" name="" id="donate-input">
-        </div>
-        <div>
-            <select id="">
-                <option value="">General Donation</option>
-                <option value="">Zakat</option>
-                <option value="">Sadaqah</option>
+            <select id="donate-type" name="">
+                <option value="GENERAL DONATION">General Donation</option>
+                <option value="ZAKAT">Zakat</option>
+                <option value="SADAQAH">Sadaqah</option>
             </select>
         </div>
         <div>
             <button id="doante-now">DONATE NOW</button>
         </div>
     </main>
+    <!-- main2 -->
+    <div class="main2">
+        <h2>Quick Donate</h2>
+        <div>Single Payment</div>
+        <div>Monthly Payment</div>
+
+        <input type="checkbox" id="donate-1000" class="single-check">
+        <label for="donate-1000">PKR 1000</label>
+
+        <input type="checkbox" id="donate-5000" class="single-check">
+        <label for="donate-5000">PKR 5000</label>
+
+        <input type="checkbox" id="donate-10000" class="single-check donate-10000">
+        <label for="donate-10000">PKR 10000</label>
+
+        <div style="display: flex; align-items: center; margin: 10px 0;">
+            <hr style="flex: 1; border: none; border-top: 1px solid #bbb; margin: 0 10px 0 0;">
+            <span style="font-weight: 500; color: #666;">OR</span>
+            <hr style="flex: 1; border: none; border-top: 1px solid #bbb; margin: 0 0 0 10px;">
+        </div>
+
+        <div id="input-div-box">
+            <input type="radio" id="donate-other">
+            <label for="donate-other" class="enter-own-amount">Enter Own Amount</label>
+            <input type="number" id="donate-input-responsive" placeholder="PKR 00.00">
+        </div>
+
+        <select id="donate-type2">
+            <option>General Donation</option>
+            <option>Zakat</option>
+            <option>Sadaqah</option>
+        </select>
+
+        <button id="quick-donate-responsive">Add Donation</button>
+    </div>
+
+
+
+    <!-- main2 -->
 
     <!-- card category -->
     <section>
@@ -521,6 +654,24 @@
                             <div class="card-footer green"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
                         </div>
                     </div>
+
+                    <!-- Card 10 -->
+                    <div class="swiper-slide">
+                        <div class="card card6">
+                            <img src="images/FoodSecurity.jpg" alt="">
+                            <div class="card-content green">
+                                <h2>FOOD SECURITY</h2>
+                                <div>
+                                    <button class="card-btn green" onclick="location.href='donate.html'">DONATE <i
+                                            class="ri-arrow-right-s-line"></i></button>
+                                    <a href="food-security.html">LEARN MORE</a>
+                                </div>
+                            </div>
+                            <div class="card-footer green"><i class="ri-hand-heart-line"></i> ZAKAT APPLICABLE</div>
+                        </div>
+                    </div>
+
+
                 </div>
 
                 <!-- Navigation buttons -->
@@ -573,10 +724,10 @@
                         <h5>Active Reviews</h5>
                     </div>
                     <div>
-                        <img src="img/1.jpg" alt="" class="review-img1">
-                        <img src="img/2.jpg" alt="" class="review-img2">
-                        <img src="img/3.jpg" alt="" class="review-img3">
-                        <img src="img/0.jpg" alt="" class="review-img4">
+                        <img src="images/1-96.webp" alt="" class="review-img1">
+                        <img src="images/FreeMedicalCamps.jpg" alt="" class="review-img2">
+                        <img src="images/DisabilitiesRehabilitation.jpg" alt="" class="review-img3">
+                        <img src="images/WaterforLife.jpg" alt="" class="review-img4">
                     </div>
                 </div>
                 <button onclick="window.location.href='about.html'">About Us</button>
@@ -674,7 +825,7 @@
             <!-- Right Side -->
             <div class="faq-right">
                 <div class="big-img">
-                    <img src="images/faq.jpg" alt="Main Image">
+                    <img src="images/how-to-build-faq-section.webp" alt="Main Image">
                 </div>
 
             </div>
@@ -765,15 +916,7 @@
 
     </div>
 
-    <!-- <div class="box2">
-        <h2>DGSW (S) Projects & More</h2>
-        <p>Welfare Dispensaries</p>
-        <p>Disabilities Rehabilitation</p>
-        <p>Education Assistance</p>
-        <p>Free Medical Camps</p>
-        <p>Free Cataract Surgeries</p>
-        <p>Water for Life</p>
-    </div> -->
+
 
 
     <div class="footer">
@@ -824,11 +967,6 @@
                 <p>© Copyright 2025. Healing Hands Welfare Trust® is a registered charity in Pakistan & registered
                     company 2433.</p>
             </div>
-        </div>
-
-        <div class="foooterlastinner">
-            <h6>Terms & Condition</h6>
-            <h6>Privacy Policy</h6>
         </div>
     </footer>
 
