@@ -401,6 +401,70 @@
         <h3>Every Zakat donation has the potential for profound impact.</h3>
     </div>
 
+     <main>
+        <div>
+            <h4>Quick Donate</h4>
+        </div>
+        <div>
+            <select name="" id="payment-type">
+                <option value="SINGLE PAYMENT">Single Payment</option>
+                <option value="MONTHLY PAYMENT">Monthly Payment</option>
+            </select>
+        </div>
+        <div id="select-div-box">
+            <select name="" id="donate-now-value">
+                <option value="PKR 1000">PKR 1000</option>
+                <option value="PKR 5000">PKR 5000</option>
+                <option value="PKR 10000">PKR 10000</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div>
+            <select id="donate-type" name="">
+                <option value="GENERAL DONATION">General Donation</option>
+                <option value="ZAKAT">Zakat</option>
+                <option value="SADAQAH">Sadaqah</option>
+            </select>
+        </div>
+        <div>
+            <button id="doante-now">DONATE NOW</button>
+        </div>
+    </main>
+    <!-- main2 -->
+    <div class="main2">
+        <h2>Quick Donate</h2>
+        <div>Single Payment</div>
+        <div>Monthly Payment</div>
+
+        <input type="checkbox" id="donate-1000" class="single-check">
+        <label for="donate-1000">PKR 1000</label>
+
+        <input type="checkbox" id="donate-5000" class="single-check">
+        <label for="donate-5000">PKR 5000</label>
+
+        <input type="checkbox" id="donate-10000" class="single-check donate-10000">
+        <label for="donate-10000">PKR 10000</label>
+
+        <div style="display: flex; align-items: center; margin: 10px 0;">
+            <hr style="flex: 1; border: none; border-top: 1px solid #bbb; margin: 0 10px 0 0;">
+            <span style="font-weight: 500; color: #666;">OR</span>
+            <hr style="flex: 1; border: none; border-top: 1px solid #bbb; margin: 0 0 0 10px;">
+        </div>
+
+        <div id="input-div-box">
+            <input type="radio" id="donate-other">
+            <label for="donate-other" class="enter-own-amount">Enter Own Amount</label>
+            <input type="number" id="donate-input-responsive" placeholder="PKR 00.00">
+        </div>
+
+        <select id="donate-type2">
+            <option>General Donation</option>
+            <option>Zakat</option>
+            <option>Sadaqah</option>
+        </select>
+
+        <button id="quick-donate-responsive">Add Donation</button>
+    </div>
     <section>
         <div class="cards-container">
             <div class="cards">
@@ -573,6 +637,57 @@
             </div>
         </div>
     </section>
+    
+    <div class="aside2">
+        <h2>MORE WAYS TO REACH OUT & GIVE</h2>
+
+        <div class="cards2">
+
+            <div>
+                <div><img src="img/phone-call.png" alt=""></div>
+                <h3>Donate over the phone</h3>
+                <div>
+                    <p>To donate over the phone,</p>
+                    <p>call <a href="tel:03460134753">0346-0134753</a> and</p>
+                    <p>ask for the Fundraising</p>
+                    <p>Team.</p>
+                </div>
+            </div>
+            <div>
+                <div><img src="img/cheque.png" alt=""></div>
+                <h3>Donate by Cheque</h3>
+                <div>
+
+                    <p>Healing Hands Welfare</p>
+                    <p>Trust and send it to us at</p>
+                    <p>P # 823/B, Survey # 212/A,</p>
+                    <p> Near Shahjehan Chowk Bismillah </p>
+                    <p> Colony, Orangi Town, Karachi.</p>
+                </div>
+            </div>
+            <div>
+                <div><img src="images/around.png" alt=""></div>
+                <h3>International Donation</h3>
+                <div>
+                    <p>PK05 ABPA</p>
+                    <p>0010063752050016</p>
+                    <p>Swift Code: ABL :</p>
+                    <p>ABPAPKKA0991</p>
+                </div>
+            </div>
+            <div>
+                <div><img src="img/bank.png" alt=""></div>
+                <h3>Donate by Bank</h3>
+                <div>
+                    <!-- <p>To donate by bank please</p> -->
+                    <p>Account name</p>
+                    <p>Healing Hands Health Care <br> Social Welfare Org.</p>
+                    <p>Account No. PK05 ABPA:0010063752050016</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <div class="footer">
         <div class="footerinner1">
@@ -593,9 +708,9 @@
             <h2>Upcoming Projects</h2>
             <h3 onclick="window.location.href='50-Bed-Hospital.html'">50-Bed Hospital</h3>
             <h3 onclick="window.location.href='Orphan-Assistance.html'">Orphan Assistance Programs</h3>
-            <h3>&nbsp;</h3>
-            <h3>&nbsp;</h3>
-            <h3>&nbsp;</h3>
+            <h3 class="footer-nbsp">&nbsp;</h3>
+            <h3 class="footer-nbsp">&nbsp;</h3>
+            <h3 class="footer-nbsp">&nbsp;</h3>
         </div>
         <div class="footerinner2">
             <h2>Quick Links</h2>
@@ -603,7 +718,7 @@
             <h3 onclick="window.location.href='contact.html'">Contact Us</h3>
             <h3 onclick="window.location.href='about.html'">About Us</h3>
             <h3 onclick="window.location.href='zakat-calculator.html'">Zakat Calculator</h3>
-            <h3>&nbsp;</h3>
+            <h3 class="footer-nbsp">&nbsp;</h3>
         </div>
         <div class="footerinner5">
             <div>
