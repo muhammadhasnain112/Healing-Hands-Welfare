@@ -657,7 +657,7 @@ main button:active {
 
 .mobile-nav-content {
     padding: 20px;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     width: 100%;
     box-sizing: border-box;
     flex: 1;
