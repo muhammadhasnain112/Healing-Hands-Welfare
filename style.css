@@ -2467,23 +2467,6 @@ footer a:hover {
     }
 }
 
-
-
-::-webkit-scrollbar {
-    border-radius: 15px;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 15px;
-    background-color: var(--primary-color);
-}
-
-::-webkit-scrollbar-track {
-    border-radius: 15px;
-    /* background-color: #c5dac7; */
-}
-
-
 /* infobar css */
 /* Main infobar styling */
 
@@ -7905,9 +7888,17 @@ section {
     .enter-own-amount {
         margin-right: 60px;
     }
+}
 
+@media (max-width: 768px) {
 
+    body,
+    html {
+        overflow-x: hidden;
+        width: 100%;
+        /* overflow-y: hidden; */
+        position: relative;
+    }
 
-
-
+    /* Fix specific problematic elements */
 }
