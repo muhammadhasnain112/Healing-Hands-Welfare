@@ -5002,7 +5002,7 @@ article {
 
 /* quick Donate 2 */
 .main2 {
-    display: block;
+    display: none;
     /* height: 350px;
     width: 95%;
     border-radius: 10px;
