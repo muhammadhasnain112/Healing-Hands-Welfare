@@ -90,15 +90,11 @@ if (mobileMenuToggle) {
             const openAcc = document.querySelector(".accordion-header.active");
             if (openAcc && openAcc !== header) {
                 openAcc.classList.remove("active");
-                openAcc.nextElementSibling.style.maxHeight = 0;
+                openAcc.nextElementSibling.classList.remove("active");
             }
 
             header.classList.toggle("active");
-            if (header.classList.contains("active")) {
-                content.style.maxHeight = content.scrollHeight + "px";
-            } else {
-                content.style.maxHeight = 0;
-            }
+            content.classList.toggle("active");
         });
     });
 
