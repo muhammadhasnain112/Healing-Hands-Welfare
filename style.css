@@ -657,6 +657,7 @@ main button:active {
 
 .mobile-nav-content {
     padding: 20px;
+    padding-top: 50px;
     width: 100%;
     box-sizing: border-box;
     flex: 1;
@@ -670,7 +671,7 @@ main button:active {
 
 .mobile-nav-section h4 {
     color: var(--primary-color);
-    font-size: 16px;
+    font-size: 23px;
     font-weight: 700;
     margin-bottom: 15px;
     font-family: 'Oswald', sans-serif;
@@ -693,7 +694,7 @@ main button:active {
 
 .mobile-nav-section h4 i {
     transition: transform 0.3s ease;
-    font-size: 14px;
+    font-size: 25px;
     color: var(--primary-color);
     margin-left: 10px;
     flex-shrink: 0;
@@ -5728,7 +5729,7 @@ article {
     }
 
     .mobile-nav-menu {
-        width: 70%;
+        width: 100%;
     }
 
     .slide-content h2 {
@@ -7211,7 +7212,8 @@ article {
     .donate-bar>h3 {
         width: 100%;
     }
-    #icons{
+
+    #icons {
         display: none;
     }
 
@@ -7868,7 +7870,8 @@ section {
     .enter-own-amount {
         margin-right: 60px;
     }
-    .footer-nbsp{
+
+    .footer-nbsp {
         display: none;
     }
 }
