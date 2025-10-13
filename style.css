@@ -3,7 +3,7 @@
     /* Green - for main branding */
     --secondary-color: #194763;
     /* Blue - for secondary elements */
-    --accent-color: #D35400;
+    --accent-color: #194763;
     /* Orange - for CTAs and highlights */
     --text-color: #fff;
     --black-color: #2C3E50;
@@ -1961,9 +1961,11 @@ section p {
 footer {
     height: 2.5vw;
     width: 100%;
+    padding: 0px 125px;
     border-top: 1px solid var(--border-color);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+   
     background-color: white;
 }
 
@@ -1975,8 +1977,10 @@ footer p {
 
 footer>div {
     height: 100%;
-    width: 37%;
+    /* width: 37%; */
     padding: 1vw;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 footer>div>div {
@@ -2214,6 +2218,7 @@ footer a:hover {
 }
 
 .aboutinner2 p {
+    font-size: 13px;
     opacity: 0.6;
     margin-top: 1vw;
     line-height: 1.5vw;
@@ -2682,11 +2687,7 @@ footer a:hover {
     border-left: 4px solid var(--primary-color);
 }
 
-.event3 {
-    padding-top: 20px !important;
-    justify-content: start !important;
-    gap: 10px;
-}
+
 
 .eventinner {
     display: flex;
@@ -5377,7 +5378,7 @@ article {
     .aboutimg1 {
         width: 100% !important;
         height: 250px !important;
-        margin: 0 !important;
+        margin-top: 10vh !important;
         object-fit: cover;
     }
 
@@ -5871,15 +5872,18 @@ article {
     }
 
     footer {
-
-        width: 100%;
+        padding: 1px 5px !important;
+        gap: 0px !important;
+        align-items: center !important;
+        height: auto !important;
+        /* width: 100%;
         border-top: 1px solid var(--border-color);
         display: flex;
         justify-content: center;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        background-color: white;
+        background-color: white; */
     }
 
     footer p {
@@ -5891,7 +5895,7 @@ article {
     footer>div {
         width: 100%;
         text-align: center;
-        padding: 20px;
+        /* padding: 10px; */
     }
 
     .foooterlastinner {
@@ -5998,6 +6002,11 @@ article {
     .imagesection p {
         font-size: 14px;
         line-height: 7vw;
+    }
+
+
+    footer {
+        flex-direction: column-reverse;
     }
 
     /* Zakat Calculator Mobile Responsive */
@@ -6389,6 +6398,10 @@ article {
     .counter-box {
         gap: 8px;
         margin-top: 8px;
+    }
+
+    .swiper {
+        overflow: visible !important;
     }
 
     .counter-box .minus,
@@ -7316,7 +7329,7 @@ article {
 }
 
 section {
-    height: 95vw;
+    /* height: 95vw; */
     margin-top: 0px !important;
 }
 
@@ -7968,4 +7981,90 @@ section {
     }
 
     /* Fix specific problematic elements */
+}
+
+/* ===== TERMS & CONDITIONS SECTION ===== */
+
+.terms {
+    background-color: #f9fafb;
+    padding: 60px 20px;
+}
+
+.terms-container {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 40px 50px;
+}
+
+.terms-container h2 {
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.terms-content {
+    font-family: nunito, sans-serif;
+    color: var(--black-color);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+.terms-content p {
+    margin-bottom: 18px;
+}
+
+.terms-content strong {
+    color: var(--primary-color);
+}
+
+.terms-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.terms-content li {
+    margin-bottom: 6px;
+    color: var(--black-color);
+    font-size: 15px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .terms-container {
+        padding: 30px 20px;
+    }
+
+    .terms-container h2 {
+        font-size: 1.7rem;
+    }
+
+    .terms-content {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+}
+
+@media (max-width: 480px) {
+    .terms {
+        padding: 40px 10px;
+    }
+
+    .terms-container {
+        padding: 25px 15px;
+    }
+
+    .terms-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .terms-content li {
+        font-size: 14px;
+    }
 }
