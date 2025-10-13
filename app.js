@@ -174,10 +174,13 @@ if (main) {
 // main section
 
 
+const about = document.getElementById('about')
+const about2 = document.getElementById('about2')
 const zakat2 = document.getElementById('zakat2')
 const envolved2 = document.getElementById('involved2')
 const infobar2 = document.getElementById('infobar2')
 const infobar3 = document.getElementById('infobar3')
+const infobar = document.getElementById('infobar')
 document.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
         second.style.display = 'flex'
@@ -196,7 +199,10 @@ envolved.addEventListener('mouseover', () => {
     infobar3.style.transform = 'translateY(0)'
     infobar2.style.visibility = 'hidden'
     infobar2.style.transform = 'translateY(10)'
-    infobar2.style.opacity = 0
+    infobar2.style.opacity = 0;
+    infobar.style.visibility = 'hidden'
+    infobar.style.transform = 'translateY(10)'
+    infobar.style.opacity = 0
 })
 infobar3.addEventListener('mouseleave', () => {
     infobar3.style.visibility = 'hidden';
@@ -212,17 +218,22 @@ envolved2.addEventListener('mouseover', () => {
     infobar2.style.visibility = 'hidden'
     infobar2.style.transform = 'translateY(10)'
     infobar2.style.opacity = 0
-
+    infobar.style.visibility = 'hidden'
+    infobar.style.transform = 'translateY(10)'
+    infobar.style.opacity = 0
 })
 zakat.addEventListener('mouseover', () => {
     infobar2.style.top = '8.5vw'
+    infobar2.style.marginLeft = '25.2vw'
     infobar2.style.opacity = 1
     infobar2.style.visibility = 'visible'
     infobar2.style.transform = 'translateY(0)'
     infobar3.style.visibility = 'hidden'
     infobar3.style.transform = 'translateY(10)'
     infobar3.style.opacity = 0
-
+    infobar.style.visibility = 'hidden'
+    infobar.style.transform = 'translateY(10)'
+    infobar.style.opacity = 0
 })
 
 zakat2.addEventListener('mouseover', () => {
@@ -234,11 +245,46 @@ zakat2.addEventListener('mouseover', () => {
     infobar3.style.visibility = 'hidden'
     infobar3.style.transform = 'translateY(10)'
     infobar3.style.opacity = 0
+    infobar.style.visibility = 'hidden'
+    infobar.style.transform = 'translateY(10)'
+    infobar.style.opacity = 0
 })
 infobar2.addEventListener('mouseleave', () => {
     infobar2.style.visibility = 'hidden'
     infobar2.style.transform = 'translateY(10px)'
     infobar2.style.opacity = 0
+})
+about.addEventListener('mouseover', () => {
+    infobar.style.top = '8.5vw'
+    infobar.style.opacity = 1
+    infobar.style.visibility = 'visible'
+    infobar.style.marginLeft = '50.5vw'
+    infobar.style.transform = 'translateY(0)'
+    infobar3.style.visibility = 'hidden'
+    infobar3.style.transform = 'translateY(10)'
+    infobar3.style.opacity = 0
+    infobar2.style.visibility = 'hidden'
+    infobar2.style.transform = 'translateY(10)'
+    infobar2.style.opacity = 0
+})
+
+about2.addEventListener('mouseover', () => {
+    infobar.style.top = `${window.scrollY + 56}px`
+    infobar.style.opacity = 1
+    infobar.style.marginLeft = '33vw'
+    infobar.style.visibility = 'visible'
+    infobar.style.transform = 'translateY(0)'
+    infobar3.style.visibility = 'hidden'
+    infobar3.style.transform = 'translateY(10)'
+    infobar3.style.opacity = 0
+    infobar2.style.visibility = 'hidden'
+    infobar2.style.transform = 'translateY(10)'
+    infobar2.style.opacity = 0
+})
+infobar.addEventListener('mouseleave', () => {
+    infobar.style.visibility = 'hidden'
+    infobar.style.transform = 'translateY(10px)'
+    infobar.style.opacity = 0
 })
 
 
@@ -295,57 +341,57 @@ const zakat_title = document.getElementById('zakat-title')
 const zakat_description = document.getElementById('zakat-description')
 
 if (donate_now) {
-donate_now_value.addEventListener('change', () => {
-    if (donate_now_value.value == 'other') {
-        select_div_box.innerHTML = `
+    donate_now_value.addEventListener('change', () => {
+        if (donate_now_value.value == 'other') {
+            select_div_box.innerHTML = `
              <input type="number" step="0.01" placeholder="Enter Amount" id="donate-input">`
-    }
-})
-
-
-donate_now.addEventListener('click', () => {
-
-    const donateinput = document.getElementById('donate-input')
-    if (donate_now_value.value == 'other') {
-        donate2(`PKR ${donateinput.value}`, donate_type.value, payment_type.value)
-        return;
-    }
-    donate2(donate_now_value.value, donate_type.value, payment_type.value)
-})
-const checkboxes = document.querySelectorAll(".single-check");
-
-checkboxes.forEach((box) => {
-    box.addEventListener("change", () => {
-        if (box.checked) {
-            checkboxes.forEach((other) => {
-                if (other !== box) other.checked = false;
-            });
         }
+    })
+
+
+    donate_now.addEventListener('click', () => {
+
+        const donateinput = document.getElementById('donate-input')
+        if (donate_now_value.value == 'other') {
+            donate2(`PKR ${donateinput.value}`, donate_type.value, payment_type.value)
+            return;
+        }
+        donate2(donate_now_value.value, donate_type.value, payment_type.value)
+    })
+    const checkboxes = document.querySelectorAll(".single-check");
+
+    checkboxes.forEach((box) => {
+        box.addEventListener("change", () => {
+            if (box.checked) {
+                checkboxes.forEach((other) => {
+                    if (other !== box) other.checked = false;
+                });
+            }
+        });
     });
-});
-input_div_box.addEventListener('click', () => {
-    donate_other.checked = true
-})
-// donate_input.addEventListener('click', () => {
-//     donate_1000.style.backgroundColor = 
-// })
+    input_div_box.addEventListener('click', () => {
+        donate_other.checked = true
+    })
+    // donate_input.addEventListener('click', () => {
+    //     donate_1000.style.backgroundColor = 
+    // })
 
 
-quick_donate_responsive.addEventListener('click', () => {
-    // console.log(donate_type2.value);
-    // console.log(payment_type.value);
-    if (donate_1000.checked) {
-        donate2('PKR 1000', donate_type2.value, payment_type.value)
-    }
-    else if (donate_5000.checked) {
-        donate2('PKR 5000', donate_type2.value, payment_type.value)
-    }
-    else if (donate_10000.checked) {
-        donate2('PKR 10000', donate_type2.value, payment_type.value)
-    } else {
-        donate2(`PKR ${donate_input.value}`, donate_type2.value, payment_type.value)
-    }
-})
+    quick_donate_responsive.addEventListener('click', () => {
+        // console.log(donate_type2.value);
+        // console.log(payment_type.value);
+        if (donate_1000.checked) {
+            donate2('PKR 1000', donate_type2.value, payment_type.value)
+        }
+        else if (donate_5000.checked) {
+            donate2('PKR 5000', donate_type2.value, payment_type.value)
+        }
+        else if (donate_10000.checked) {
+            donate2('PKR 10000', donate_type2.value, payment_type.value)
+        } else {
+            donate2(`PKR ${donate_input.value}`, donate_type2.value, payment_type.value)
+        }
+    })
 }
 
 if (reset) {

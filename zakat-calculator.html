@@ -73,45 +73,45 @@
     <header>
        <!-- Desktop Navigation -->
     <nav id="navbar" class="desktop-nav">
-        <div class="navinner1">
-            <img src="images/Medical Monogram-02.png" alt="logo" class="header-logo"
-                onclick="window.location.href='index.html' ">
-        </div>
-        <div class="navinner2">
-            <div>
+            <div class="navinner1">
+                <img src="images/Medical Monogram-02.png" alt="logo" class="header-logo"
+                    onclick="window.location.href='index.html' ">
+            </div>
+            <div class="navinner2">
                 <div>
-                    <div class="inputdiv with-icon">
-                        <input type="text" placeholder="SEARCH" class="with-icon" id="input"> <i class="ri-search-line"
-                            id="search-icon"></i>
-                    </div>
-                    <div id="input2">
-                        <!-- <p class="">GBP <i class="ri-arrow-down-s-line"></i>&nbsp; </p> -->
-                        <p class="">EN <i class="ri-arrow-down-s-line"></i>&nbsp;</p>
-                        <small class="contact" onclick="window.location.href = 'contact.html'">CONTACT US</small>
-                        <small class="contact" onclick=" window.location.href = 'zakat-calculator.html' ">ZAKAT
-                            CALCULATOR</small>
+                    <div>
+                        <div class="inputdiv with-icon">
+                            <input type="text" placeholder="SEARCH" class="with-icon" id="input"> <i
+                                class="ri-search-line" id="search-icon"></i>
+                        </div>
+                        <div id="input2">
+                            <!-- <p class="">GBP <i class="ri-arrow-down-s-line"></i>&nbsp; </p> -->
+                            <p class="">EN <i class="ri-arrow-down-s-line"></i>&nbsp;</p>
+                            <small class="contact" onclick="window.location.href = 'contact.html'">CONTACT US</small>
+                            <small class="contact" onclick=" window.location.href = 'zakat-calculator.html' ">ZAKAT
+                                CALCULATOR</small>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="appeals">
-                <h3 id="zakat">ZAKAT <i class="ri-arrow-down-s-line"></i></h3>
-                <h3 id="envolved">OUR PROJECTS<i class="ri-arrow-down-s-line"></i></h3>
-                <h3 id="about" onclick="window.location.href = 'about.html'">ABOUT US</h3>
+                <div class="appeals">
+                    <h3 id="zakat">ZAKAT <i class="ri-arrow-down-s-line"></i></h3>
+                    <h3 id="envolved">OUR PROJECTS<i class="ri-arrow-down-s-line"></i></h3>
+                    <h3 id="about">ABOUT US<i class="ri-arrow-down-s-line"></i></h3>
+                </div>
             </div>
-        </div>
-        <div id="add-cart-detail">
-            <h2>CART</h2>
-            <h3 id="add-card-number"></h3>
-            <h5 id="add-card-allrupee"></h5>
-        </div>
-        <div class="navinner3">
-            <p>Call us for information</p>
-            <strong style="margin-top: 0.3vw;"><a href="tel:+923460134753">0346-0134753</a></strong>
-            <button style="margin-top: 1vw;" onclick="window.location.href = 'donate.html'">DONATE NOW &nbsp;<i
-                    class="ri-arrow-right-s-line"></i></button>
-        </div>
-    </nav>
+            <div id="add-cart-detail">
+                <h2>CART</h2>
+                <h3 id="add-card-number"></h3>
+                <h5 id="add-card-allrupee"></h5>
+            </div>
+            <div class="navinner3">
+                <p>Call us for information</p>
+                <strong style="margin-top: 0.3vw;"><a href="tel:+923460134753">0346-0134753</a></strong>
+                <button style="margin-top: 1vw;" onclick="window.location.href = 'donate.html'">DONATE NOW &nbsp;<i
+                        class="ri-arrow-right-s-line"></i></button>
+            </div>
+        </nav>
         <h6 class="image-zakat">
             <div>
 
@@ -169,6 +169,8 @@
                 <h4>Pages <i class="ri-arrow-down-s-line"></i></h4>
                 <ul class="mobile-nav-links">
                     <li><a href="about.html"><i class="ri-information-line"></i> About Us</a></li>
+                    <!-- <li><a href="vision.html"><i class="ri-eye-line icon"></i> Our Visions</a></li> -->
+                    <li><a href="mission.html"><i class="ri-focus-2-line icon"></i> Our Missions & Visions</a></li>
                     <li><a href="contact.html"><i class="ri-phone-line"></i> Contact Us</a></li>
                 </ul>
             </div>
@@ -248,6 +250,7 @@
     </div>
     <!-- donate bars -->
 
+    
     <div class="secondnav" id="second">
         <div class="img">
             <img src="images/Medical Monogram-02.png" alt="logo" class="header2-logo"
@@ -265,8 +268,8 @@
         </div>
 
         <div>
-            <h5 class="border" style="padding-right: 1vw;" id="about2" onclick="window.location.href = 'about.html'">
-                ABOUT US </h5>
+            <h5 class="border" style="padding-right: 1vw;" id="about2">
+                ABOUT US <i class="ri-arrow-down-s-line" style=" color: black !important;"></i></h5>
         </div>
 
 
@@ -506,7 +509,14 @@
 
 
 
-
+ <div class="infobar" id="infobar">
+        <a href="about.html">
+            <h3>About Us</h3>
+        </a>
+        <a href="mission.html">
+            <h3>Our Missions & Visions</h3>
+        </a>
+    </div>
     <div class="infobar2" id="infobar2">
         <a href="zakat-calculator.html">
             <h3>Zakat Calculator</h3>
@@ -627,7 +637,7 @@
         </div>
     </div>
 
-     <div class="footer">
+      <div class="footer">
         <div class="footerinner1">
             <img src="images/logo.png" alt="logo" class="footer-logo" onclick="window.location.href='index.html' ">
             <p>Empowering communities through healthcare, education, and sustainable support — together, we
@@ -636,10 +646,14 @@
         <div class="footerinner2">
             <h2>Ongoing Projects</h2>
             <h3 onclick="window.location.href='Dispensaries.html'">Welfare Dispensaries</h3>
+            <h3 onclick="window.location.href='disabilities.html'">Disabilities Rehabilitation</h3>
+            <h3 onclick="window.location.href='Women.html'">Women Vocational Training Program</h3>
             <h3 onclick="window.location.href='Education.html'">Education Assistance</h3>
             <h3 onclick="window.location.href='Free-medical.html'">Free Medical Camps</h3>
             <h3 onclick="window.location.href='Free-cataract.html'">Free Cataract Surgeries</h3>
+            <h3 onclick="window.location.href='Freejudiciary.html'">Free Judiciary Services </h3>
             <h3 onclick="window.location.href='Water-for-Life.html'">Water for Life</h3>
+            <h3 onclick="window.location.href='food-security.html'">Food Security</h3>
         </div>
 
         <div class="footerinner2">
@@ -667,7 +681,7 @@
             <div><a href="https://www.linkedin.com/in/healing-hands/" target="_blank"><i
                         class="ri-linkedin-fill"></i></a></div>
         </div>
-    </div> 
+    </div>
 
    <footer>
         <!-- <div> -->
