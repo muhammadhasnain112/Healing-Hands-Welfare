@@ -4432,7 +4432,10 @@ footer a:hover {
     color: var(--black-color);
     font-family: 'Lato', sans-serif;
 }
-
+li>strong{
+        color: var(--black-color) ;
+        list-style: none;    
+        }
 .leader-info span {
     font-size: 0.9rem;
     color: var(--primary-color);
